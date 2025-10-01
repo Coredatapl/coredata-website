@@ -60,7 +60,7 @@ export default function TopNav({ showNav = true }: TopNavProps) {
           onClick={() => scrollTo(AppComponents.contact)}
         />
         <button
-          className="block md:hidden px-3 py-1 cursor-pointer text-xl leading-none border-2 border-solid border-slate-100 rounded-xl bg-white outline-none focus:outline-none"
+          className="block md:hidden px-3 py-1 cursor-pointer text-xl leading-none border-2 border-solid border-slate-100 rounded-lg bg-white outline-none focus:outline-none"
           type="button"
           onClick={() => setNavOpen(!navOpen)}
           ref={topNavButtonRef}
@@ -85,7 +85,7 @@ export default function TopNav({ showNav = true }: TopNavProps) {
             </Link>
           </li>
           <li className="block mt-4 md:mt-0 md:mx-4 md:mr-10 lg:mx-10 lg:mr-20 my-auto">
-            <Link to={"/"} onClick={() => scrollTo(AppComponents.automation)}>
+            <Link to={"/"} onClick={() => scrollTo(AppComponents.ai)}>
               <span className="font-semibold text-purple-800 hover:text-fuchsia-700">
                 AI
               </span>

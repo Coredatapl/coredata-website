@@ -1,8 +1,8 @@
 import Section from "./ui/Section";
 import Spacer from "./ui/Spacer";
-import Symbol from "./ui/Symbol";
 import Header from "./ui/Header";
 import ListIconItem from "./ui/ListIconItem";
+import Caption from "./ui/Caption";
 import { AppComponents } from "./App";
 
 import imgOptimization from "../assets/img/desk.jpg";
@@ -27,7 +27,7 @@ export default function About() {
         </div>
         <div className="w-full lg:w-6/12 lg:pl-20">
           <div className="justify-start items-start text-left">
-            <Symbol icon="fi fi-sr-bulb" />
+            <Caption message="About us" />
             <Header message={`Every element of our life can be optimized`} />
             <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
               The{" "}

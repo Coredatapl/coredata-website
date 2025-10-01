@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Footer from "./Footer";
 import Apps from "./Apps";
-import Automation from "./Automation";
+import Ai from "./Ai";
 import Consultations from "./Consultations";
 import Technologies from "./Technologies";
 import Contact from "./Contact";
@@ -16,7 +16,7 @@ export enum AppComponents {
   hero = "hero",
   about = "about",
   apps = "apps",
-  automation = "automation",
+  ai = "ai",
   consultations = "consultations",
   technologies = "technologies",
   contact = "contact",
@@ -39,7 +39,7 @@ export default function App({ loaded = false }: AppProps) {
       <Hero />
       <About />
       <Apps />
-      <Automation />
+      <Ai />
       <Consultations />
       <Technologies />
       <Contact />

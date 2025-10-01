@@ -1,45 +1,110 @@
 import { AppComponents } from "./App";
+import Form, {
+  FormField,
+  FormFieldType,
+  HtmlElementType,
+  SubmitResult,
+} from "./ui/Form";
+import Header, { HeaderTheme } from "./ui/Header";
 import Section from "./ui/Section";
+import SubHeader from "./ui/SubHeader";
 
 export default function Contact() {
+  const fields: FormField[] = [
+    {
+      field: FormFieldType.INPUT,
+      name: "contactName",
+      placeholder: "Name",
+      type: HtmlElementType.TEXT,
+      required: true,
+      minLength: 3,
+    },
+    {
+      field: FormFieldType.INPUT,
+      name: "contactEmail",
+      placeholder: "Email",
+      type: HtmlElementType.EMAIL,
+      required: true,
+      minLength: 5,
+    },
+    {
+      field: FormFieldType.INPUT,
+      name: "contactSubject",
+      placeholder: "Subject",
+      type: HtmlElementType.TEXT,
+      required: true,
+      minLength: 3,
+    },
+    {
+      field: FormFieldType.TEXTAREA,
+      name: "contactMessage",
+      placeholder: "Message",
+      type: HtmlElementType.TEXT,
+      required: true,
+    },
+  ];
+
+  async function handleSubmit(data: FormData) {
+    const name = data.get("contactName");
+    console.log("Submitting form for", name);
+    return {
+      type: "success",
+      message: "Form submitted successfully",
+    } as SubmitResult;
+  }
+
   return (
     <Section id={AppComponents.contact} bgColor="bg-slate-100">
-      <div className="relative flex flex-wrap -mb-10 py-4 lg:py-16 z-10 justify-center bg-white shadow-xl rounded-lg">
-        <div className="w-full px-2 md:px-4 text-center">
-          <h2 className="font-semibold text-3xl text-shadow shadow-gray-300">
-            That&apos;s about it!
-          </h2>
-          <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
-            If you want to cooperate with us, please contact us, send an e-mail
-            and describe what we can help you with. You have all the contact
-            information below. Feel free to check out our{" "}
-            <a
-              className="text-blueGray-700 hover:text-coredataViolet"
-              href="https://www.linkedin.com/company/coredatapl/"
-              target="_blank"
-              rel="noreferrer"
-              title="Go to our LinkedIn page"
-            >
-              LinkedIn
-            </a>{" "}
-            page.
-          </p>
-          <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
-            We are already looking forward to working together{" "}
-            <i className="fa-regular fa-face-smile-wink"></i>
-          </p>
-          <div className="flex flex-col md:block mt-10">
-            <a
-              href="mailto:hello@coredata.pl"
-              target="_blank"
-              rel="noreferrer"
-              className="md:px-6 py-4 text-sm text-white hover:text-white font-bold rounded-xl outline-none focus:outline-none bg-coredataViolet hover:bg-indigo-600 active:bg-indigo-600 shadow hover:shadow-lg ease-linear transition-all duration-150"
-            >
-              Email Us
-              <i className="fi fi-sr-paper-plane inline-block ml-2 align-middle"></i>
-            </a>
+      <div className="relative flex flex-wrap -mb-10 z-10 justify-center text-left bg-white shadow-xl rounded-lg overflow-hidden">
+        <div className="relative z-0 hidden lg:flex flex-col w-1/2 xl:w-2/3 px-6 md:px-8 py-4 lg:py-8 bg-coredataViolet text-white">
+          <Header message="Contact information" theme={HeaderTheme.Light} />
+          <div>
+            <p className="leading-relaxed mt-4 mb-4">
+              If you&apos;d like to collaborate with us, send us an email and
+              let us know how we can help. Below you&apos;ll find all our
+              contact details and a contact form. We also invite you to visit
+              our{" "}
+              <a
+                href="https://www.linkedin.com/company/coredatapl/"
+                target="_blank"
+                rel="noreferrer"
+                title="Go to our LinkedIn page"
+              >
+                LinkedIn
+              </a>{" "}
+              profile.
+            </p>
           </div>
-          <div className="text-center mt-4 lg:mt-16"></div>
+          <div className="flex flex-col my-4">
+            <div className="flex flex-row items-center justify-start align-middle">
+              <div className="h-10 w-10 mr-2 p-2 text-xl text-white font-normal outline-none focus:outline-none">
+                <i className={`fi fi-sr-envelope inline-block ml-1`}></i>
+              </div>
+              <a href="mailto:hello@coredata.pl" className="pl-2">
+                hello@coredata.pl
+              </a>
+            </div>
+            <div className="flex flex-row items-center justify-start align-middle mt-4">
+              <div className="h-10 w-10 mr-2 p-2 text-xl text-white font-normal rounded-full outline-none focus:outline-none">
+                <i className={`fi fi-sr-address-book inline-block ml-1`}></i>
+              </div>
+              <p className="pl-2">Warsaw, Poland</p>
+            </div>
+          </div>
+        </div>
+        <div className="relative z-0 flex flex-col w-full lg:w-1/2 xl:w-1/3 px-6 md:px-8 py-4 lg:py-8">
+          <div className="flex lg:hidden flex-col">
+            <SubHeader message="Contact form" />
+            <p className="leading-relaxed mt-4 mb-4">
+              If you want to cooperate with us, please contact us, send an
+              e-mail and describe what we can help you with.
+            </p>
+          </div>
+          <Form
+            fields={fields}
+            onSubmit={handleSubmit}
+            submitLabel="Send message"
+          />
         </div>
       </div>
     </Section>

@@ -3,7 +3,7 @@ import ListIconItem from "./ui/ListIconItem";
 import Section from "./ui/Section";
 import Spacer from "./ui/Spacer";
 import Header from "./ui/Header";
-import Symbol from "./ui/Symbol";
+import Caption from "./ui/Caption";
 
 import imgConsulting from "../assets/img/consulting.jpg";
 
@@ -18,7 +18,7 @@ export default function Consultations() {
       <div className="flex flex-wrap items-center text-left mb-20">
         <div className="w-full lg:w-6/12">
           <div className="lg:pr-12">
-            <Symbol icon="fi fi-sr-chart-user" />
+            <Caption message="Consulting" />
             <Header message={`We provide IT consultations`} />
             <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
               We help in a wide range, from visual identification to the full

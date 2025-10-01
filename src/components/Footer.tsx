@@ -17,17 +17,15 @@ export default function Footer() {
       <div className="container flex flex-row w-11/12 lg:w-8/12 py-4 mx-auto justify-between items-start">
         <div className="flex flex-col">
           <div className="flex flex-row ">
-            <div className="hidden md:flex flex-col">
+            <div className="hidden md:flex flex-col xl:pr-10 2xl:pr-20">
               <Logo />
-              <h5 className="font-semibold pt-10">
-                Get in touch with us today!
-              </h5>
+              <h5 className="font-semibold pt-10">Get in touch today!</h5>
               <a href="mailto:hello@coredata.pl">
                 <p className="">hello@coredata.pl</p>
               </a>
               <div className="mt-6 lg:mb-0 mb-6">
                 <a
-                  className="h-10 w-10 mr-2 p-2 bg-white shadow-lg hover:shadow-xl font-normal items-center justify-center align-center rounded-full outline-none focus:outline-none"
+                  className="h-10 w-10 mr-2 p-2 bg-white hover:bg-white/50 shadow-lg hover:shadow-xl font-normal items-center justify-center align-center rounded-full outline-none focus:outline-none"
                   href="https://www.linkedin.com/company/coredatapl/"
                   target="_blank"
                   rel="noreferrer"
@@ -40,7 +38,7 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  className="h-10 w-10 mr-2 p-2 bg-white shadow-lg hover:shadow-xl font-normal items-center justify-center align-center rounded-full outline-none focus:outline-none"
+                  className="h-10 w-10 mr-2 p-2 bg-white hover:bg-white/50 shadow-lg hover:shadow-xl font-normal items-center justify-center align-center rounded-full outline-none focus:outline-none"
                   href="https://github.com/Coredatapl"
                   target="_blank"
                   rel="noreferrer"
@@ -54,13 +52,13 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="hidden md:flex flex-col min-w-20"></div>
-            <div className="hidden lg:flex flex-col min-w-40 xl:pr-10 2xl:pr-20">
-              <p className="text-md mt-0 pt-10">Wilanów, Warsaw</p>
-              <p className="text-md mt-0">Masovian district</p>
-              <p className="text-md mt-0 mb-2">Poland, PL</p>
-              <p className="text-md mt-0">REGON 389256815</p>
-              <p className="text-md mt-0 pb-10">NIP 7971953479</p>
+            <div className="hidden md:flex flex-col min-w-2 lg:min-w-4"></div>
+            <div className="hidden lg:flex flex-col min-w-40 xl:pr-10 2xl:pr-20 text-sm xl:text-md">
+              <p className="mt-0 pt-10">Wilanów, Warsaw</p>
+              <p className="mt-0">Masovian district</p>
+              <p className="mt-0 mb-2">Poland, PL</p>
+              <p className="mt-0">REGON 389256815</p>
+              <p className="mt-0 pb-10">NIP 7971953479</p>
             </div>
             <div className="flex flex-col min-w-10 md:min-w-20 md:border-l border-solid border-slate-300"></div>
             <div className="flex flex-col min-w-28 md:min-w-40">
@@ -81,7 +79,7 @@ export default function Footer() {
               </Link>
               <Link
                 to={"/"}
-                onClick={() => scrollTo(AppComponents.automation)}
+                onClick={() => scrollTo(AppComponents.ai)}
                 className="pt-2 text-sm font-normal"
               >
                 Automation
@@ -116,8 +114,10 @@ export default function Footer() {
           </div>
           <div className="flex flex-row w-full justify-center md:justify-start">
             <p className="pt-10 text-xs">
-              <Link to={"https://coredata.pl/"}>Coredata</Link> &copy; {year}.
-              All rights reserved.
+              <Link to={"https://coredata.pl/"} className="font-bold">
+                Coredata
+              </Link>{" "}
+              &copy; {year}. All rights reserved.
             </p>
           </div>
         </div>

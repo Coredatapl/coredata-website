@@ -1,4 +1,4 @@
-﻿<svg viewBox="0 0 144 24" xmlns="http://www.w3.org/2000/svg">
+﻿<svg viewBox="0 0 134 24" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient
       id="gradient-fill"
@@ -13,13 +13,13 @@
       <stop offset="1" stop-color="#6d5afe" />
     </linearGradient>
   </defs>
-  <text fill="url(#gradient-fill)">
+  <text fill="url(#gradient-fill)" dominant-baseline="middle">
     <tspan
       font-family="Gilroy, sans-serif"
       font-size="30px"
       font-weight="700"
       x="0"
-      y="20"
+      y="10"
     >
       Coredata
     </tspan>

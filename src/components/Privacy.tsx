@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useLoading } from "../hooks/useLoading";
 import { useUi } from "../hooks/useUi";
 import Section from "./ui/Section";
@@ -26,22 +25,19 @@ export default function Privacy() {
   return (
     <AppView>
       <Navbar showNav={false} />
-      <Section
-        bgColor="bg-slate-100"
-        style="relative pt-28 md:pt-20 bg-gradient-to-b from-blue-500 to-indigo-900"
-      >
+      <Section bgColor="bg-slate-200" style="relative pt-28 md:pt-20">
         <div className="h-100-px"></div>
       </Section>
-      <Section bgColor="bg-slate-100" style="relative">
+      <Section bgColor="bg-slate-100" style="relative pt-28">
         <Spacer color={"text-slate-100"} fillColor={"fill-slate-100"} />
         <div className="relative flex -mt-40 py-16 z-10 justify-center bg-white shadow-xl rounded-lg">
-          <div className="w-8/12 mx-auto px-4">
+          <div className="w-11/12 md:w-8/12 mx-auto px-4">
             <div className="text-center">
               <Header message="Privacy Policy" />
             </div>
             <div className="mt-10 py-10 border-t border-slate-200 text-left">
-              <div className="text-sm leading-normal -mt-10 text-slate-400 font-semibold">
-                Updated: 24.03.2023
+              <div className="text-sm leading-normal -mt-10 text-slate-400">
+                Effective as of 24.03.2023
               </div>
               <div className="flex flex-col w-full mt-10 justify-center">
                 <Header message="Introduction" theme={HeaderTheme.Color} />
@@ -51,7 +47,7 @@ export default function Privacy() {
                   You use the Service and tells You about Your privacy rights
                   and how the law protects You.
                 </p>
-                <p className="mb-10 text-md leading-relaxed">
+                <p className="mb-12 text-md leading-relaxed">
                   We use Your Personal data to provide and improve the Service.
                   By using the Service, You agree to the collection and use of
                   information in accordance with this Privacy Policy.
@@ -60,7 +56,7 @@ export default function Privacy() {
                 <p className="mb-4 text-md leading-relaxed">
                   For the purposes of this Privacy Policy:
                 </p>
-                <ul className="list-disc ml-5 mb-10">
+                <ul className="list-disc ml-5 mb-12">
                   <li>
                     <b>Company</b> - (referred to as either &quot;the
                     Company&quot;, &quot;We&quot;, &quot;Us&quot; or
@@ -148,7 +144,7 @@ export default function Privacy() {
                   mobile operating system, the type of mobile Internet browser
                   You use, unique device identifiers and other diagnostic data.
                 </p>
-                <p className="mb-10 text-md leading-relaxed">
+                <p className="mb-12 text-md leading-relaxed">
                   We may also collect information that Your browser sends
                   whenever You visit our Service or when You access the Service
                   by or through a mobile device.
@@ -157,7 +153,7 @@ export default function Privacy() {
                   message="Tracking Technologies and Cookies"
                   theme={HeaderTheme.Color}
                 />
-                <p className="mb-10 text-md leading-relaxed">
+                <p className="mb-12 text-md leading-relaxed">
                   We use Cookies and similar tracking technologies to track the
                   activity on Our Service and store certain information.
                   Tracking technologies used are beacons, tags, and scripts to
@@ -172,7 +168,7 @@ export default function Privacy() {
                   You have the right to delete or request that We assist in
                   deleting the Personal Data that We have collected about You.
                 </p>
-                <p className="mb-10 text-md leading-relaxed">
+                <p className="mb-12 text-md leading-relaxed">
                   Please note, however, that We may need to retain certain
                   information when we have a legal obligation or lawful basis to
                   do so.
@@ -187,7 +183,7 @@ export default function Privacy() {
                   this page. We will let You know by updating the
                   &quot;Updated&quot; date at the top of this Privacy Policy.
                 </p>
-                <p className="mb-10 text-md leading-relaxed">
+                <p className="mb-12 text-md leading-relaxed">
                   You are advised to review this Privacy Policy periodically for
                   any changes. Changes to this Privacy Policy are effective when
                   they are posted on this page.
@@ -200,17 +196,7 @@ export default function Privacy() {
               </div>
             </div>
             <div className="py-10 border-t border-slate-200">
-              <div className="flex flex-wrap justify-center">
-                <div className="w-full lg:w-9/12 px-4">
-                  <Link
-                    to="/"
-                    className="text-sm text-white hover:text-white font-bold mt-4 mb-2 px-6 py-4 rounded-xl outline-none focus:outline-none bg-coredataViolet hover:bg-indigo-600 active:bg-indigo-600 shadow hover:shadow-lg ease-linear transition-all duration-150"
-                  >
-                    <i className="fi fi-sr-enter inline-block mr-2 align-middle"></i>
-                    Return to start page
-                  </Link>
-                </div>
-              </div>
+              <div className="flex flex-wrap justify-center"></div>
             </div>
           </div>
         </div>

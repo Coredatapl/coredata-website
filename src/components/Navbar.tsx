@@ -17,7 +17,7 @@ export default function Navbar({ showNav }: NavbarProps) {
       className="fixed z-20 w-full bg-slate-100/70 backdrop-blur-lg"
     >
       <div className="container flex w-11/12 md:w-8/12 py-4 mx-auto justify-between items-start">
-        <Link to={"/"} onClick={() => scrollTop()}>
+        <Link to={"/"} onClick={() => scrollTop()} className="mt-2">
           <Logo />
         </Link>
         <TopNav showNav={showNav} />
