@@ -8,6 +8,7 @@ import Form, {
 import Header, { HeaderTheme } from "./ui/Header";
 import Section from "./ui/Section";
 import SubHeader from "./ui/SubHeader";
+import { sendEmail } from "../utils/api.service";
 
 export default function Contact() {
   const fields: FormField[] = [
@@ -46,7 +47,36 @@ export default function Contact() {
 
   async function handleSubmit(data: FormData) {
     const name = data.get("contactName");
-    console.log("Submitting form for", name);
+    const email = data.get("contactEmail");
+    const subject = data.get("contactSubject");
+    const message = data.get("contactMessage");
+
+    if (
+      typeof name !== "string" ||
+      typeof email !== "string" ||
+      typeof subject !== "string" ||
+      typeof message !== "string"
+    ) {
+      return {
+        type: "error",
+        message: "Form data is invalid",
+      } as SubmitResult;
+    }
+    if (name.length < 3 || email.length < 5 || message.length === 0) {
+      return {
+        type: "error",
+        message: "Form data is too short",
+      } as SubmitResult;
+    }
+
+    const response = await sendEmail(name, email, subject, message);
+
+    if (!response.success) {
+      return {
+        type: "error",
+        message: `Form submission error: ${response.result}`,
+      } as SubmitResult;
+    }
     return {
       type: "success",
       message: "Form submitted successfully",
