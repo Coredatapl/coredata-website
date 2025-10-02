@@ -31,3 +31,54 @@ a:hover {
 .text-shadow-xs {
   text-shadow: 1px 1px 4px var(--tw-shadow-color);
 }
+
+.menu-btn {
+  pointer-events: all;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s cubic-bezier(0, 0, 0.3642, 1);
+}
+@media screen and (max-width: 992px) {
+  .menu-btn {
+    transform: scale(0.85);
+  }
+}
+.menu-btn span,
+.menu-btn span:after,
+.menu-btn span:before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2.5px;
+  background: rgb(55 65 81);
+  backface-visibility: hidden;
+  transition: inherit;
+}
+.menu-btn span {
+  position: relative;
+}
+.menu-btn span:after,
+.menu-btn span:before {
+  position: absolute;
+}
+.menu-btn span:before {
+  top: -9px;
+}
+.menu-btn span:after {
+  width: 18px;
+  top: 9px;
+}
+.menu-btn.opened span {
+  transform: rotate(45deg);
+}
+.menu-btn.opened span:before {
+  transform: translate(0px, 9px) rotate(-90deg);
+}
+.menu-btn.opened span:after {
+  opacity: 0;
+  width: 24px;
+  transform: translate(0px, -9px) rotate(-90deg);
+}

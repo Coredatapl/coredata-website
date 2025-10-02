@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useUi } from "../hooks/useUi";
-import { AppComponents } from "./App";
+import { AppComponents } from "../utils/common";
 import Logo from "./ui/Logo";
 import Spacer from "./ui/Spacer";
 

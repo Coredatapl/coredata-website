@@ -3,7 +3,7 @@ import Spacer from "./ui/Spacer";
 import Header from "./ui/Header";
 import ListIconItem from "./ui/ListIconItem";
 import Caption from "./ui/Caption";
-import { AppComponents } from "./App";
+import { AppComponents } from "../utils/common";
 
 import imgOptimization from "../assets/img/desk.jpg";
 

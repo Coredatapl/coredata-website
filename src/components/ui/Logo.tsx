@@ -11,7 +11,7 @@ export default function Logo({ style = "color" }: LogoProps) {
   return (
     <div className="flex">
       <img
-        className="w-32 h-8"
+        className="w-32 min-w-32 h-8"
         src={style === "light" ? imgLogoLight : imgLogoColor}
         alt="BoardApp"
       />

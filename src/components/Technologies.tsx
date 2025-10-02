@@ -1,4 +1,4 @@
-import { AppComponents } from "./App";
+import { AppComponents } from "../utils/common";
 import Header from "./ui/Header";
 import Section from "./ui/Section";
 import Caption from "./ui/Caption";

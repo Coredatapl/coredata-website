@@ -1,4 +1,4 @@
-import { AppComponents } from "./App";
+import { AppComponents } from "../utils/common";
 import Form, {
   FormField,
   FormFieldType,

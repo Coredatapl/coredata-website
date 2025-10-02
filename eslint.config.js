@@ -28,6 +28,9 @@ export default [
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      "no-undef": "off",
+      "no-unused-vars": "off",
+      "react/react-in-jsx-scope": "off",
       "react/jsx-no-target-blank": "off",
       "react-refresh/only-export-components": [
         "warn",

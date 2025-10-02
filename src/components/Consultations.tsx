@@ -1,4 +1,4 @@
-import { AppComponents } from "./App";
+import { AppComponents } from "../utils/common";
 import ListIconItem from "./ui/ListIconItem";
 import Section from "./ui/Section";
 import Spacer from "./ui/Spacer";

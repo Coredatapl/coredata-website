@@ -1,5 +1,5 @@
 import { useUi } from "../hooks/useUi";
-import { AppComponents } from "./App";
+import { AppComponents } from "../utils/common";
 import Section from "./ui/Section";
 import Title from "./ui/Title";
 import Button from "./ui/Button";

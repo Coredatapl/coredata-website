@@ -1,4 +1,4 @@
-import { AppComponents } from "./App";
+import { AppComponents } from "../utils/common";
 import Header, { HeaderTheme } from "./ui/Header";
 import Section from "./ui/Section";
 import Spacer from "./ui/Spacer";

@@ -2,7 +2,7 @@ import Header from "./ui/Header";
 import SubHeader from "./ui/SubHeader";
 import Section from "./ui/Section";
 import Caption from "./ui/Caption";
-import { AppComponents } from "./App";
+import { AppComponents } from "../utils/common";
 
 import imgApps from "../assets/img/coding.jpg";
 import imgLinesBg from "../assets/img/lines3.svg";

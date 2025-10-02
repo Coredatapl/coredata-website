@@ -11,17 +11,6 @@ import Consultations from "./Consultations";
 import Technologies from "./Technologies";
 import Contact from "./Contact";
 
-export enum AppComponents {
-  navbar = "navbar",
-  hero = "hero",
-  about = "about",
-  apps = "apps",
-  ai = "ai",
-  consultations = "consultations",
-  technologies = "technologies",
-  contact = "contact",
-}
-
 interface AppProps {
   loaded?: boolean;
 }
