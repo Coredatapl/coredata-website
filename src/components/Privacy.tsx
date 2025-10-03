@@ -3,7 +3,7 @@ import { useLoading } from "../hooks/useLoading";
 import { useUi } from "../hooks/useUi";
 import Section from "./ui/Section";
 import Spacer from "./ui/Spacer";
-import Header, { HeaderTheme } from "./ui/Header";
+import Header from "./ui/Header";
 import SubHeader from "./ui/SubHeader";
 import Loading from "./ui/Loading";
 import AppView from "./AppView";
@@ -31,16 +31,20 @@ export default function Privacy() {
       <Section bgColor="bg-slate-100" style="relative pt-28">
         <Spacer color={"text-slate-100"} fillColor={"fill-slate-100"} />
         <div className="relative flex -mt-40 py-16 z-10 justify-center bg-white shadow-xl rounded-lg">
-          <div className="w-11/12 md:w-8/12 mx-auto px-4">
-            <div className="text-center">
-              <Header message="Privacy Policy" />
-            </div>
-            <div className="mt-10 py-10 border-t border-slate-200 text-left">
-              <div className="text-sm leading-normal -mt-10 text-slate-400">
+          <div className="w-11/12 mx-auto px-4 text-left">
+            <div className="border-b border-slate-200">
+              <h1 className={`font-semibold text-4xl text-shadow`}>
+                Privacy Policy
+              </h1>
+              <div className="text-sm leading-normal mt-10 mb-6 text-slate-400">
                 Effective as of 24.03.2023
               </div>
+            </div>
+            <div className="py-10">
               <div className="flex flex-col w-full mt-10 justify-center">
-                <Header message="Introduction" theme={HeaderTheme.Color} />
+                <div className="mb-6 border-b border-slate-200">
+                  <Header message="Introduction" />
+                </div>
                 <p className="mb-4 text-md leading-relaxed">
                   This Privacy Policy describes Our policies and procedures on
                   the collection, use and disclosure of Your information when
@@ -52,7 +56,10 @@ export default function Privacy() {
                   By using the Service, You agree to the collection and use of
                   information in accordance with this Privacy Policy.
                 </p>
-                <Header message="Definitions" theme={HeaderTheme.Color} />
+
+                <div className="mb-6 border-b border-slate-200">
+                  <Header message="Definitions" />
+                </div>
                 <p className="mb-4 text-md leading-relaxed">
                   For the purposes of this Privacy Policy:
                 </p>
@@ -70,7 +77,7 @@ export default function Privacy() {
                     website among its many uses.
                   </li>
                   <li>
-                    <b>Country</b> - refers to: Poland
+                    <b>Country</b> - refers to Poland
                   </li>
                   <li>
                     <b>Website</b> - refers to Coredata website, accessible from{" "}
@@ -111,11 +118,12 @@ export default function Privacy() {
                     applicable.
                   </li>
                 </ul>
-                <Header
-                  message="Types of Data Collected"
-                  theme={HeaderTheme.Color}
-                />
-                <SubHeader message="Personal Data" color="text-coredataBlue" />
+
+                <div className="mb-6 border-b border-slate-200">
+                  <Header message="Types of Data Collected" />
+                </div>
+
+                <SubHeader message="Personal Data" />
                 <p className="mb-4 text-md leading-relaxed">
                   While using Our Service, We may ask You to provide Us with
                   certain personally identifiable information that can be used
@@ -125,7 +133,8 @@ export default function Privacy() {
                 <ul className="list-disc ml-5 mb-6">
                   <li>Usage Data</li>
                 </ul>
-                <SubHeader message="Usage Data" color="text-coredataBlue" />
+
+                <SubHeader message="Usage Data" />
                 <p className="mb-4 text-md leading-relaxed">
                   Usage Data is collected automatically when using the Service.
                 </p>
@@ -149,10 +158,11 @@ export default function Privacy() {
                   whenever You visit our Service or when You access the Service
                   by or through a mobile device.
                 </p>
-                <Header
-                  message="Tracking Technologies and Cookies"
-                  theme={HeaderTheme.Color}
-                />
+
+                <div className="mb-6 border-b border-slate-200">
+                  <Header message="Tracking Technologies and Cookies" />
+                </div>
+
                 <p className="mb-12 text-md leading-relaxed">
                   We use Cookies and similar tracking technologies to track the
                   activity on Our Service and store certain information.
@@ -160,10 +170,11 @@ export default function Privacy() {
                   collect and track information and to improve and analyze Our
                   Service.
                 </p>
-                <Header
-                  message="Delete Your Personal Data"
-                  theme={HeaderTheme.Color}
-                />
+
+                <div className="mb-6 border-b border-slate-200">
+                  <Header message="Delete Your Personal Data" />
+                </div>
+
                 <p className="mb-4 text-md leading-relaxed">
                   You have the right to delete or request that We assist in
                   deleting the Personal Data that We have collected about You.
@@ -173,22 +184,28 @@ export default function Privacy() {
                   information when we have a legal obligation or lawful basis to
                   do so.
                 </p>
-                <Header
-                  message="Changes to this Privacy Policy"
-                  theme={HeaderTheme.Color}
-                />
+
+                <div className="mb-6 border-b border-slate-200">
+                  <Header message="Changes to this Privacy Policy" />
+                </div>
+
                 <p className="mb-4 text-md leading-relaxed">
                   We may update Our Privacy Policy from time to time. We will
                   notify You of any changes by posting the new Privacy Policy on
                   this page. We will let You know by updating the
-                  &quot;Updated&quot; date at the top of this Privacy Policy.
+                  &quot;Effective as of&quot; date at the top of this Privacy
+                  Policy.
                 </p>
                 <p className="mb-12 text-md leading-relaxed">
                   You are advised to review this Privacy Policy periodically for
-                  any changes. Changes to this Privacy Policy are effective when
-                  they are posted on this page.
+                  any changes. Changes to this document are effective when they
+                  are posted on this page.
                 </p>
-                <Header message="Contact Us" theme={HeaderTheme.Color} />
+
+                <div className="mb-6 border-b border-slate-200">
+                  <Header message="Contact Us" />
+                </div>
+
                 <p className="mb-4 text-md leading-relaxed">
                   If you have any questions about this Privacy Policy, You can
                   contact us by email: <b>hello&#64;coredata.pl</b>

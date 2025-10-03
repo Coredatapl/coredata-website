@@ -7,6 +7,7 @@ body {
 }
 
 a {
+  color: #000;
   font-weight: 500;
   text-decoration: inherit;
   transition-property: color, background-color, border-color,
