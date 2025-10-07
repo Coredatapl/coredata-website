@@ -6,7 +6,7 @@ export const useUi = () => {
     }
   };
 
-  const scrollToRef = (ref: React.MutableRefObject<HTMLElement>) => {
+  const scrollToRef = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 

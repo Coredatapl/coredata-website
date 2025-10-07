@@ -31,7 +31,10 @@ interface FormProps {
   submitLabel?: string;
 }
 
-// qlty-ignore: qlty:function-complexity qlty:return-statements
+/**
+ * qlty-ignore: qlty:function-complexity
+ * qlty-ignore: qlty:return-statements
+ */
 export default function Form({
   className,
   fields,

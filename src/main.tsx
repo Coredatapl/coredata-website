@@ -10,25 +10,36 @@ import ErrorBoundary from "./components/ui/ErrorBoundary.tsx";
 import "./assets/css/index.css";
 import "./assets/css/fonts.css";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorBoundary />,
+    },
+    {
+      path: "/privacy",
+      element: <Privacy />,
+    },
+    {
+      path: "/terms",
+      element: <Terms />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorBoundary />,
-  },
-  {
-    path: "/privacy",
-    element: <Privacy />,
-  },
-  {
-    path: "/terms",
-    element: <Terms />,
-  },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
-]);
+    future: {
+      v7_fetcherPersist: true,
+      v7_normalizeFormMethod: true,
+      v7_partialHydration: true,
+      v7_relativeSplatPath: true,
+      v7_skipActionErrorRevalidation: true,
+    },
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
