@@ -9,9 +9,26 @@ export enum AppComponents {
   contact = "contact",
 }
 
+export const AppTheme = {
+  Light: "light",
+  Dark: "dark",
+  Color: "color",
+};
+
+export enum HtmlElementType {
+  TEXT = "text",
+  EMAIL = "email",
+  PASSWORD = "password",
+}
+
+export enum FormFieldType {
+  INPUT = "input",
+  TEXTAREA = "textarea",
+}
+
 export const targetInside = (
   target: EventTarget,
   element: HTMLElement
 ): boolean => {
-  return element && element.contains(target as Node);
+  return element?.contains(target as Node);
 };

@@ -10,14 +10,14 @@ export default function MobileNav({ opened }: MobileNavProps) {
   const [visible, setVisible] = useState(false);
 
   function fadeIn() {
-    setVisible(true);
+    setTimeout(() => {
+      setVisible(true);
+    }, 100);
   }
 
   useEffect(() => {
     if (opened) {
-      setTimeout(() => {
-        fadeIn();
-      }, 100);
+      fadeIn();
     } else {
       setVisible(false);
     }
@@ -70,7 +70,7 @@ export default function MobileNav({ opened }: MobileNavProps) {
           </ul>
         </div>
         <div className="flex flex-col w-1/2 justify-start text-sm">
-          <div className="flex flex-col mb-10">
+          <div className="flex flex-col mb-10 max-w-40">
             <h3 className="font-semibold text-base">Info</h3>
             <div className="mt-4">
               <MobileNavItem

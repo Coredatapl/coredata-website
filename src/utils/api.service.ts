@@ -21,8 +21,8 @@ type HTTPMethod =
 type WithBody = Extract<HTTPMethod, "POST" | "PUT" | "UPDATE" | "DELETE">;
 type NoBody = Exclude<HTTPMethod, WithBody>;
 type MethodBodyCombination =
-  | { method?: WithBody; body?: RequestInit["body"] }
-  | { method?: NoBody; body?: undefined };
+  | { method?: WithBody; body: RequestInit["body"] }
+  | { method?: NoBody; body: undefined };
 type TypedRequestInit = RequestInit &
   MethodBodyCombination & { headers?: TypedHeaders };
 

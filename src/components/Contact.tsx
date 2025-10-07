@@ -1,11 +1,11 @@
-import { AppComponents } from "../utils/common";
-import Form, {
-  FormField,
+import {
+  AppComponents,
+  AppTheme,
   FormFieldType,
   HtmlElementType,
-  SubmitResult,
-} from "./ui/Form";
-import Header, { HeaderTheme } from "./ui/Header";
+} from "../utils/common";
+import Form, { FormField, SubmitResult } from "./ui/Form";
+import Header from "./ui/Header";
 import Section from "./ui/Section";
 import SubHeader from "./ui/SubHeader";
 import { sendEmail } from "../utils/api.service";
@@ -87,7 +87,7 @@ export default function Contact() {
     <Section id={AppComponents.contact} bgColor="bg-slate-100">
       <div className="relative flex flex-wrap -mb-10 z-10 justify-center text-left bg-white shadow-xl rounded-lg overflow-hidden">
         <div className="relative z-0 hidden lg:flex flex-col w-1/2 xl:w-2/3 px-6 md:px-8 py-4 lg:py-8 bg-coredataViolet text-white">
-          <Header message="Contact information" theme={HeaderTheme.Light} />
+          <Header message="Contact information" theme={AppTheme.Light} />
           <div>
             <p className="leading-relaxed mt-4 mb-4">
               If you&apos;d like to collaborate with us, send us an email and

@@ -1,19 +1,11 @@
+// qlty-ignore: qlty:function-complexity qlty:return-statements
+
 import { FormEvent, useEffect, useState } from "react";
 import Input from "./Input";
 import ActionIndicator from "./ActionIndicator";
 import Button from "./Button";
 import TextArea from "./TextArea";
-
-export enum HtmlElementType {
-  TEXT = "text",
-  EMAIL = "email",
-  PASSWORD = "password",
-}
-
-export enum FormFieldType {
-  INPUT = "input",
-  TEXTAREA = "textarea",
-}
+import { FormFieldType, HtmlElementType } from "../../utils/common";
 
 export interface FormField {
   field: FormFieldType;
@@ -53,35 +45,45 @@ export default function Form({
 
   function validate(data: FormData) {
     let errorMessage = "";
-    let formValid = true;
     for (const field of formFields) {
       const value = data.get(field.name);
-      let valid = true;
+      const matchingValue = field.matchingField
+        ? data.get(field.matchingField)
+        : null;
+      errorMessage = validateField(field, value, matchingValue);
+      const valid = errorMessage.length === 0;
 
-      if (field.required && (!value || !value.toString().length)) {
-        valid = false;
-        errorMessage += `Field ${field.name} is required. `;
-      }
-      if (field.matchingField) {
-        const matchingField = formFields.filter(
-          (f) => f.name === field.matchingField
-        )[0];
-        const matchingValue = data.get(field.matchingField);
-        if (matchingField && value !== matchingValue) {
-          valid = false;
-          errorMessage += `Fields ${matchingField ? matchingField.placeholder : field.matchingField} and ${field.placeholder} must match. `;
-          updateField(matchingField.name, { ...matchingField, valid });
-        }
-      }
-      formValid = valid ?? false;
       updateField(field.name, { ...field, valid });
     }
-    if (!formValid) {
+    if (errorMessage.length !== 0) {
       console.warn("Form invalid: " + errorMessage);
     }
     setResult({ type: "error", message: errorMessage });
 
-    return formValid;
+    return errorMessage.length === 0;
+  }
+
+  function validateField(
+    field: FormField,
+    value: FormDataEntryValue | null,
+    matchingValue: FormDataEntryValue | null
+  ) {
+    let errorMessage = "";
+    if (field.required && (!value || !value.toString().length)) {
+      errorMessage += `Field ${field.name} is required. `;
+    }
+    if (!field.matchingField) {
+      return errorMessage;
+    }
+
+    const matchingField = formFields.filter(
+      (f) => f.name === field.matchingField
+    )[0];
+    if (matchingField && value !== matchingValue) {
+      errorMessage += `Fields ${matchingField ? matchingField.placeholder : field.matchingField} and ${field.placeholder} must match. `;
+      updateField(matchingField.name, { ...matchingField, valid: false });
+    }
+    return errorMessage;
   }
 
   function updateField(name: string, data: FormField) {

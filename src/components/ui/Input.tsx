@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { HtmlElementType } from "./Form";
+import { HtmlElementType } from "../../utils/common";
 
 interface InputProps {
   name: string;
@@ -49,6 +49,7 @@ export default function Input({
   }
 
   function validate(value: string) {
+    console.log("Validating input: " + value + " for field: " + name);
     setErrorMessage(undefined);
     setValid(true);
     if (required && !value.trim().length) {
@@ -59,6 +60,12 @@ export default function Input({
         `Field ${placeholder} must be at least ${minLength} characters long`
       );
       setValid(false);
+    } else if (type === HtmlElementType.EMAIL) {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(value)) {
+        setErrorMessage(`Field ${placeholder} must be a valid email address`);
+        setValid(false);
+      }
     }
   }
 

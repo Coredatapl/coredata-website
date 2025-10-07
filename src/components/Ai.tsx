@@ -1,5 +1,5 @@
-import { AppComponents } from "../utils/common";
-import Header, { HeaderTheme } from "./ui/Header";
+import { AppComponents, AppTheme } from "../utils/common";
+import Header from "./ui/Header";
 import Section from "./ui/Section";
 import Spacer from "./ui/Spacer";
 
@@ -34,7 +34,7 @@ export default function Ai() {
             color="coredataViolet"
             bgColor="bg-white/80"
           />
-          <Header message={`AI Automation`} theme={HeaderTheme.Light} />
+          <Header message={`AI Automation`} theme={AppTheme.Light} />
           <p className="mt-4 mb-4 text-lg leading-relaxed text-white">
             We create solutions that allow for the automation of business
             processes using such AI technologies as AI Agents and tools like
@@ -68,10 +68,7 @@ export default function Ai() {
             color="coredataViolet"
             bgColor="bg-white/80"
           />
-          <Header
-            message={`AI Documents Processing`}
-            theme={HeaderTheme.Light}
-          />
+          <Header message={`AI Documents Processing`} theme={AppTheme.Light} />
           <p className="mt-4 mb-4 text-lg leading-relaxed text-white">
             AI technology automates and enhances document handling, ensuring
             accuracy, speed, and efficiency. From data extraction to intelligent
@@ -110,7 +107,7 @@ export default function Ai() {
           />
           <Header
             message={`AI-powered Knowledge Base`}
-            theme={HeaderTheme.Light}
+            theme={AppTheme.Light}
           />
           <p className="mt-4 mb-4 text-lg leading-relaxed text-white">
             A knowledge base is a centralized repository of information designed

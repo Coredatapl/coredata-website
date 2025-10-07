@@ -1,8 +1,4 @@
-export const HeaderTheme = {
-  Light: "light",
-  Dark: "dark",
-  Color: "color",
-};
+import { AppTheme } from "../../utils/common";
 
 interface HeaderProps {
   message: string;
@@ -11,23 +7,23 @@ interface HeaderProps {
 
 export default function Header({
   message,
-  theme = HeaderTheme.Dark,
+  theme = AppTheme.Dark,
 }: HeaderProps) {
   function getTheme() {
     switch (theme) {
-      case HeaderTheme.Light:
-        return "text-white shadow-gray-500";
-      case HeaderTheme.Color:
+      case AppTheme.Light:
+        return "text-white shadow-gray-600";
+      case AppTheme.Color:
         return "text-coredataBlue shadow-gray-100";
-      case HeaderTheme.Dark:
+      case AppTheme.Dark:
       default:
-        return "shadow-gray-100";
+        return "shadow-gray-200";
     }
   }
 
   return (
     <h2
-      className={`w-full mb-6 text-2xl font-semibold text-shadow tracking-wide ${getTheme()}`}
+      className={`w-full mb-6 text-2xl font-semibold text-shadow-xs tracking-wide ${getTheme()}`}
     >
       {message}
     </h2>
