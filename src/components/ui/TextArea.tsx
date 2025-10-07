@@ -19,11 +19,11 @@ export default function TextArea({
 }: TextAreaProps) {
   const style = error
     ? "border-b-red-700 focus:border-b-red-600"
-    : "border-b-gray-200 focus:border-b-coredataBlue";
+    : "border-b-gray-200 focus:border-b-brand-violet";
 
   return (
     <textarea
-      className={`block w-full mt-1 mb-4 py-2 px-1 text-xs md:text-sm shadow-sm outline-none border-t-transparent border-b border-x-transparent focus:border-t-transparent focus:border-x-transparent ${style}`}
+      className={`block w-full mt-1 mb-4 py-2 px-1 text-xs md:text-sm outline-none border-t-transparent border-b border-x-transparent focus:border-t-transparent focus:border-x-transparent ${style}`}
       name={name}
       rows={4}
       id={id}

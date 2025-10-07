@@ -6,7 +6,7 @@ interface SymbolProps {
 
 export default function Symbol({
   icon,
-  color = "text-coredataViolet",
+  color = "text-brand-violet",
   bgColor = "bg-white",
 }: SymbolProps) {
   return (

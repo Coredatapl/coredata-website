@@ -14,9 +14,9 @@ export default function Ai() {
     <Section
       id={AppComponents.ai}
       bgColor="bg-slate-100"
-      style="relative pt-28 md:pt-20 bg-gradient-to-b from-blue-500 to-indigo-900"
+      style="relative pt-28 md:pt-20 bg-linear-to-b from-brand-blue to-brand-violet"
     >
-      <Spacer color={"text-slate-100"} fillColor={"fill-blue-500"} />
+      <Spacer color={"text-slate-100"} fillColor={"fill-brand-blue"} />
       <div className="flex flex-wrap justify-between items-center text-left">
         <div className="hidden lg:block w-6/12 px-10">
           <div className="relative flex flex-col w-full mb-6">
@@ -31,7 +31,7 @@ export default function Ai() {
         <div className="w-full lg:w-6/12 px-4 mb-20">
           <Caption
             message="Automation"
-            color="coredataViolet"
+            color="brand-violet"
             bgColor="bg-white/80"
           />
           <Header message={`AI Automation`} theme={AppTheme.Light} />
@@ -65,7 +65,7 @@ export default function Ai() {
         <div className="w-full lg:w-6/12 px-4 mb-20">
           <Caption
             message="Documents"
-            color="coredataViolet"
+            color="brand-violet"
             bgColor="bg-white/80"
           />
           <Header message={`AI Documents Processing`} theme={AppTheme.Light} />
@@ -88,7 +88,7 @@ export default function Ai() {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-between items-center text-left">
+      <div className="flex flex-wrap justify-between items-center text-left mb-20">
         <div className="hidden lg:block w-5/12 px-4">
           <div className="relative flex flex-col w-full mb-6">
             <img
@@ -102,7 +102,7 @@ export default function Ai() {
         <div className="w-full lg:w-7/12 px-10 mb-20">
           <Caption
             message="Knowledge"
-            color="coredataViolet"
+            color="brand-violet"
             bgColor="bg-white/80"
           />
           <Header

@@ -8,7 +8,7 @@ interface ListIconItemProps {
 export default function ListIconItem({
   message,
   icon = "",
-  iconColor = "coredataViolet",
+  iconColor = "brand-violet",
 }: ListIconItemProps) {
   return (
     <li className="py-2">

@@ -6,7 +6,7 @@ interface SubSymbolProps {
 
 export default function SubSymbol({
   icon,
-  color = "text-coredataViolet",
+  color = "text-brand-violet",
   bgColor = "bg-white",
 }: SubSymbolProps) {
   return (

@@ -1,4 +1,4 @@
-import { Link, useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router";
 import Title from "./Title";
 import AppView from "../AppView";
 import Navbar from "../Navbar";
@@ -40,7 +40,7 @@ export default function ErrorBoundary() {
           </p>
           <Link
             to="/"
-            className="mt-10 px-6 py-4 text-sm text-white hover:text-white font-bold rounded-lg outline-none focus:outline-none bg-coredataViolet hover:bg-indigo-600 active:bg-indigo-600 shadow hover:shadow-lg ease-linear transition-all duration-150"
+            className="mt-10 px-6 py-4 text-sm text-white hover:text-white font-bold rounded-lg outline-none focus:outline-none bg-brand-violet hover:bg-indigo-600 active:bg-indigo-600 shadow hover:shadow-lg ease-linear transition-all duration-150"
           >
             <i className="fi fi-sr-arrow-left inline-block mr-2 align-middle"></i>
             Go back

@@ -14,7 +14,7 @@ export default function Header({
       case AppTheme.Light:
         return "text-white shadow-gray-600";
       case AppTheme.Color:
-        return "text-coredataBlue shadow-gray-100";
+        return "text-brand-blue shadow-gray-100";
       case AppTheme.Dark:
       default:
         return "shadow-gray-200";

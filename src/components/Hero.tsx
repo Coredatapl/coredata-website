@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="relative z-10 container flex flex-col my-32 md:my-auto items-start">
           <Title>
             Optimize your{" "}
-            <span className="inline-block bg-gradient-to-r font-semibold text-transparent from-coredataBlue via-coredataViolet to-indigo-600 bg-clip-text text-shadow-none">
+            <span className="inline-block bg-linear-to-r font-semibold text-transparent from-brand-blue via-brand-violet to-indigo-600 bg-clip-text text-shadow-none">
               business
             </span>
           </Title>

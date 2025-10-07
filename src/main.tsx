@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router";
 import App from "./components/App.tsx";
 import Privacy from "./components/Privacy.tsx";
 import Terms from "./components/Terms.tsx";

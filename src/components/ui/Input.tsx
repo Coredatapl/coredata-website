@@ -35,7 +35,7 @@ export default function Input({
   const [errorMessage, setErrorMessage] = useState<string | undefined>();
   const style = !valid
     ? "border-b-red-700 focus:border-b-red-600"
-    : "border-b-gray-200 focus:border-b-coredataBlue";
+    : "border-b-gray-200 focus:border-b-brand-violet";
 
   function handleOnChange(value: string) {
     validate(value);
@@ -49,7 +49,6 @@ export default function Input({
   }
 
   function validate(value: string) {
-    console.log("Validating input: " + value + " for field: " + name);
     setErrorMessage(undefined);
     setValid(true);
     if (required && !value.trim().length) {
@@ -82,7 +81,7 @@ export default function Input({
         </div>
       )}
       <input
-        className={`form-input inline-block w-full mt-1 mb-4 py-2 px-1 text-xs md:text-sm shadow-sm outline-none border-t-transparent border-b border-x-transparent focus:border-t-transparent focus:border-x-transparent ${style}`}
+        className={`form-input inline-block w-full mt-1 mb-4 py-2 px-1 text-xs md:text-sm outline-none border-t-transparent border-b border-x-transparent focus:border-t-transparent focus:border-x-transparent ${style}`}
         name={name}
         type={type}
         id={id}

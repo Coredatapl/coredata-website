@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useUi } from "../../hooks/useUi";
 import { AppComponents } from "../../utils/common";
 import { useUtil } from "../../hooks/useUtil";

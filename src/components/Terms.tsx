@@ -25,7 +25,7 @@ export default function Terms() {
     <AppView>
       <Navbar showNav={false} />
       <Section bgColor="bg-slate-200" style="relative pt-28 md:pt-20">
-        <div className="h-100-px"></div>
+        <div className="h-[100px]"></div>
       </Section>
       <Section bgColor="bg-slate-100" style="relative">
         <Spacer color={"text-slate-100"} fillColor={"fill-slate-100"} />

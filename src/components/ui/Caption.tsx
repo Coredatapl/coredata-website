@@ -7,7 +7,7 @@ interface CaptionProps {
 export default function Caption({
   message,
   color = "white",
-  bgColor = "bg-gradient-to-b from-coredataBlue to-coredataViolet",
+  bgColor = "bg-linear-to-b from-brand-blue to-brand-violet",
 }: CaptionProps) {
   return (
     <div

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useUi } from "../hooks/useUi";
 import { AppComponents } from "../utils/common";
 import Logo from "./ui/Logo";

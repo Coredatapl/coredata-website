@@ -1,6 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #3d91fc;
+  --color-brand-violet: #5e72e4;
+
+  --spacing-100-px: 100px;
+  --spacing-450-px: 450px;
+  --spacing-850-px: 850px;
+  --spacing-860-px: 860px;
+}
+
+@custom-variant hover (&:hover);
 
 body {
   font-family: "Bai Jamjuree";

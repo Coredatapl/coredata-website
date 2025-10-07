@@ -86,7 +86,7 @@ export default function Contact() {
   return (
     <Section id={AppComponents.contact} bgColor="bg-slate-100">
       <div className="relative flex flex-wrap -mb-10 z-10 justify-center text-left bg-white shadow-xl rounded-lg overflow-hidden">
-        <div className="relative z-0 hidden lg:flex flex-col w-1/2 xl:w-2/3 px-6 md:px-8 py-4 lg:py-8 bg-coredataViolet text-white">
+        <div className="relative z-0 hidden lg:flex flex-col w-1/2 xl:w-2/3 px-6 md:px-8 py-4 lg:py-8 bg-brand-violet text-white">
           <Header message="Contact information" theme={AppTheme.Light} />
           <div>
             <p className="leading-relaxed mt-4 mb-4">

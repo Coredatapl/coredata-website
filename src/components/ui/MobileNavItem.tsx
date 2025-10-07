@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useUi } from "../../hooks/useUi";
 
 interface MobileNavItemProps {
@@ -20,7 +20,7 @@ export default function MobileNavItem({ id, to, label }: MobileNavItemProps) {
     <Link
       to={to}
       onClick={() => handleClick()}
-      className="block hover:translate-x-2 transition-transform duration-300 ease-in-out"
+      className="block transition-transform transition-discrete duration-300 ease-in-out hover:text-brand-blue"
     >
       {label}
     </Link>
