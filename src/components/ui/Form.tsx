@@ -1,5 +1,3 @@
-// qlty-ignore: qlty:function-complexity qlty:return-statements
-
 import { FormEvent, useEffect, useState } from "react";
 import Input from "./Input";
 import ActionIndicator from "./ActionIndicator";
@@ -33,6 +31,7 @@ interface FormProps {
   submitLabel?: string;
 }
 
+// qlty-ignore: qlty:function-complexity qlty:return-statements
 export default function Form({
   className,
   fields,

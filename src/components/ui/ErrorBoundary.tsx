@@ -2,9 +2,9 @@ import { Link, useRouteError } from "react-router-dom";
 import Title from "./Title";
 import AppView from "../AppView";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 import imgNotFound from "../../assets/img/404.svg";
-import Footer from "../Footer";
 
 export default function ErrorBoundary() {
   const error = useRouteError();
