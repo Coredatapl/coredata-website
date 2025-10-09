@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HtmlElementType } from "../../utils/common";
+import FormInfo from "./FormInfo";
 
 interface InputProps {
 	name: string;
@@ -75,11 +76,7 @@ export default function Input({
 
 	return (
 		<>
-			{errorMessage && (
-				<div className="flex align-middle text-xs text-red-800">
-					<i className={`fi fi-sr-info w-4 h-4 mt-1 mr-1`}></i> {errorMessage}
-				</div>
-			)}
+			{errorMessage && <FormInfo message={errorMessage} type="error" />}
 			<input
 				className={`form-input inline-block w-full mt-1 mb-4 py-2 px-1 text-xs md:text-sm outline-none border-t-transparent border-b border-x-transparent focus:border-t-transparent focus:border-x-transparent ${style}`}
 				name={name}

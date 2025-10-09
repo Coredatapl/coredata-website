@@ -92,7 +92,7 @@ const apiService = {
 
 			if (!response.ok) {
 				const errorMessage = await getErrorMessage(response);
-				console.error(errorMessage);
+				console.warn(errorMessage);
 
 				return {
 					success: false,
@@ -105,8 +105,12 @@ const apiService = {
 
 			return { success: true, result, status: response.status };
 		} catch (error) {
-			console.error("Api error:", error);
-			return { success: false, result: `Api error: ${error}`, status: 500 };
+			const errorMessage = getApiErrorMessage(error);
+			return {
+				success: false,
+				result: `Api error: ${errorMessage}`,
+				status: 500,
+			};
 		}
 	},
 };
@@ -129,11 +133,30 @@ const getErrorMessage = async (response: Response): Promise<string> => {
 		} else {
 			errorMessage = `Api error ${status}: Request incorrect`;
 		}
+		console.error("Api error: " + errorMessage, result.message);
+
 		return errorMessage;
 	} catch (error) {
-		console.error("Api error message parse error:", error);
+		console.error("Api response parse error:", error);
 		return `Api error ${status}: Request incorrect`;
 	}
+};
+
+const getApiErrorMessage = (error: any): string => {
+	let message = "Api error";
+	let errorMessage = "";
+	console.log("Api error object:", error);
+	if (error instanceof Error) {
+		errorMessage = error.message;
+	} else if (typeof error === "string") {
+		errorMessage = error;
+	}
+	console.error("Api error: " + errorMessage, error);
+
+	if (errorMessage.length && errorMessage.indexOf("Failed to fetch") !== -1) {
+		message = "Resource unavailable";
+	}
+	return message;
 };
 
 const sendEmail = async (
@@ -146,7 +169,7 @@ const sendEmail = async (
 	const body = JSON.stringify({
 		recipient: `${import.meta.env.VITE_APP_API_RECIPIENT}`,
 		subject: `Message from ${name} ${email} via Coredata website`,
-		message: `Name: ${name}\nEmail: ${email}\n\nSubject: ${subject}\nMessage: ${message}`,
+		message: `Name: ${name}\nEmail: ${email}\n\nSubject: ${subject}\n\n${message}`,
 	});
 
 	return apiService.send("POST", url, body);
