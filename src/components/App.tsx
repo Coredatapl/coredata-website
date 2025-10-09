@@ -1,38 +1,38 @@
 import { useLoading } from "../hooks/useLoading";
-import Loading from "./ui/Loading";
 import About from "./About";
-import AppView from "./AppView";
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import Footer from "./Footer";
-import Apps from "./Apps";
 import Ai from "./Ai";
+import Apps from "./Apps";
+import AppView from "./AppView";
 import Consultations from "./Consultations";
-import Technologies from "./Technologies";
 import Contact from "./Contact";
+import Footer from "./Footer";
+import Hero from "./Hero";
+import Navbar from "./Navbar";
+import Technologies from "./Technologies";
+import Loading from "./ui/Loading";
 
 interface AppProps {
-  loaded?: boolean;
+	loaded?: boolean;
 }
 
 export default function App({ loaded = false }: AppProps) {
-  const { loading } = useLoading();
+	const { loading } = useLoading();
 
-  if (!loaded && loading) {
-    return <Loading />;
-  }
+	if (!loaded && loading) {
+		return <Loading />;
+	}
 
-  return (
-    <AppView>
-      <Navbar />
-      <Hero />
-      <About />
-      <Apps />
-      <Ai />
-      <Consultations />
-      <Technologies />
-      <Contact />
-      <Footer />
-    </AppView>
-  );
+	return (
+		<AppView>
+			<Navbar />
+			<Hero />
+			<About />
+			<Apps />
+			<Ai />
+			<Consultations />
+			<Technologies />
+			<Contact />
+			<Footer />
+		</AppView>
+	);
 }
