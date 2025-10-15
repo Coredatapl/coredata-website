@@ -10,36 +10,25 @@ import NotFound from "./components/ui/NotFound.tsx";
 import "./assets/css/index.css";
 import "./assets/css/fonts.css";
 
-const router = createBrowserRouter(
-	[
-		{
-			path: "/",
-			element: <App />,
-			errorElement: <ErrorBoundary />,
-		},
-		{
-			path: "/privacy",
-			element: <Privacy />,
-		},
-		{
-			path: "/terms",
-			element: <Terms />,
-		},
-		{
-			path: "*",
-			element: <NotFound />,
-		},
-	],
+const router = createBrowserRouter([
 	{
-		future: {
-			v7_fetcherPersist: true,
-			v7_normalizeFormMethod: true,
-			v7_partialHydration: true,
-			v7_relativeSplatPath: true,
-			v7_skipActionErrorRevalidation: true,
-		},
+		path: "/",
+		element: <App />,
+		errorElement: <ErrorBoundary />,
 	},
-);
+	{
+		path: "/privacy",
+		element: <Privacy />,
+	},
+	{
+		path: "/terms",
+		element: <Terms />,
+	},
+	{
+		path: "*",
+		element: <NotFound />,
+	},
+]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
