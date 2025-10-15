@@ -1,11 +1,20 @@
 <IfModule mod_rewrite.c>
-
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteEngine On RewriteBase / 
+  RewriteRule ^index\.html$ - [L] 
+  RewriteCond %{REQUEST_FILENAME} !-f 
+  RewriteCond %{REQUEST_FILENAME} !-d 
+  RewriteCond %{REQUEST_FILENAME} !-l 
   RewriteRule . /index.html [L]
+</IfModule>
 
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=300; includeSubDomains"
+  Header set Content-Security-Policy "frame-ancestors 'none'; default-src 'self' https:; form-action 'self'; base-uri 'self';" 
+  Header set Cross-Origin-Embedder-Policy "require-corp"
+  Header set Cross-Origin-Opener-Policy "same-origin" 
+  Header set Cross-Origin-Resource-Policy "same-origin"
+  Header set X-Frame-Options "DENY" 
+  Header set X-Content-Type-Options "nosniff" 
+  Header set Referrer-Policy "no-referrer" 
+  Header set Permissions-Policy "geolocation=(), microphone=()"
 </IfModule>
