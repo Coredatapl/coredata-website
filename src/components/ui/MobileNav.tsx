@@ -55,6 +55,13 @@ export default function MobileNav({ opened }: MobileNavProps) {
             </li>
             <li className="mr-10 my-5">
               <MobileNavItem
+                id={AppComponents.consultations}
+                to={"/"}
+                label="IT Consultations"
+              />
+            </li>
+            <li className="mr-10 my-5">
+              <MobileNavItem
                 id={AppComponents.technologies}
                 to={"/"}
                 label="Technologies"
