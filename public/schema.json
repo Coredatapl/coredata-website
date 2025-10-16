@@ -1,0 +1,16 @@
+{
+  "@context": "https://www.schema.org",
+  "@type": "Corporation",
+  "name": "Coredata",
+  "url": "https://coredata.pl/",
+  "logo": "https://coredata.pl/img/logo-color.png",
+  "description": "We specialize in the automation and optimization of business processes, create web applications, implement AI-based IT solutions, and provide IT consultations.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wilanów",
+    "addressLocality": "Warsaw",
+    "addressRegion": "Mazowieckie",
+    "postalCode": "",
+    "addressCountry": "Poland"
+  }
+}

@@ -1,4 +1,4 @@
-import { sendEmail } from "../utils/api.service";
+import { sendEmail } from "../utils/api/api.service";
 import {
 	AppComponents,
 	AppTheme,
@@ -74,12 +74,12 @@ export default function Contact() {
 		if (!response.success) {
 			return {
 				type: "error",
-				message: `Form submission error: ${response.result}`,
+				message: `Form submission error. ${response.result}.`,
 			} as SubmitResult;
 		}
 		return {
 			type: "success",
-			message: "Form submitted successfully",
+			message: "Form submitted successfully. Thank you!",
 		} as SubmitResult;
 	}
 

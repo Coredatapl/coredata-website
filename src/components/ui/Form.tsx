@@ -1,7 +1,9 @@
 import { FormEvent, useState } from "react";
+import { Link } from "react-router";
 import { FormFieldType, HtmlElementType } from "../../utils/common";
 import ActionIndicator from "./ActionIndicator";
 import Button from "./Button";
+import FormInfo from "./FormInfo";
 import Input from "./Input";
 import TextArea from "./TextArea";
 
@@ -118,25 +120,25 @@ export default function Form({
 		setResult(result);
 	}
 
+	function resetForm() {
+		setFormFields(fields);
+		setResult(undefined);
+	}
+
 	function renderResult() {
 		if (!result) {
 			return null;
 		}
 
-		let color = "text-gray-500";
-		let icon = "fi-sr-info";
-		if (result.type === "error") {
-			color = "text-red-800";
-			icon = "fi-sr-exclamation";
-		} else if (result.type === "success") {
-			color = "text-emerald-600";
-			icon = "fi-sr-check-circle";
-		}
-
 		return (
-			<div className={`flex items-start ${color}`}>
-				<i className={`fi ${icon} w-5 h-5 mt-1 mr-2`}></i> {result.message}
-			</div>
+			<>
+				<FormInfo message={result.message} type={result.type} />
+				{result.type === "error" && (
+					<Link className="mt-2" to="" onClick={() => resetForm()}>
+						Retry
+					</Link>
+				)}
+			</>
 		);
 	}
 
