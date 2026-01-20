@@ -1,5 +1,5 @@
-import { targetInside } from "../utils/common";
+import { parseMarkdown, targetInside } from "../utils/common";
 
 export const useUtil = () => {
-	return { targetInside };
+	return { targetInside, parseMarkdown };
 };

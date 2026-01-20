@@ -1,3 +1,6 @@
+import DOMPurify from "dompurify";
+import { marked } from "marked";
+
 export enum AppComponents {
 	navbar = "navbar",
 	hero = "hero",
@@ -31,4 +34,10 @@ export const targetInside = (
 	element: HTMLElement,
 ): boolean => {
 	return element?.contains(target as Node);
+};
+
+export const parseMarkdown = async (markdownText: string): Promise<string> => {
+	const dirtyHtml = await marked.parse(markdownText);
+	const cleanHtml = DOMPurify.sanitize(dirtyHtml);
+	return cleanHtml;
 };

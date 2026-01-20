@@ -10,14 +10,11 @@ This document outlines basic security practices for our organization, focusing o
 
 ## Definitions
 
-Company
-: (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Coredata, Wilanów, Warsaw Masovian district Poland, PL.
+**Company** - (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Coredata, Wilanów, Warsaw Masovian district Poland, PL.
 
-Website
-: refers to Coredata website, accessible from [https://coredata.pl](https://coredata.pl)
+**Website** - refers to Coredata website, accessible from [https://coredata.pl](https://coredata.pl)
 
-Service
-: refers to any service or application developed and provided by the Company including the Website
+**Service** - refers to any service or application developed and provided by the Company including the Website
 
 ## Vulnerability Reporting
 

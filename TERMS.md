@@ -12,23 +12,17 @@ Please read these terms and conditions carefully before using Our Service.
 
 For the purposes of these Terms and Conditions:
 
-Company
-: (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Coredata, Wilanów, Warsaw Masovian district Poland, PL.
+**Company** - (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Coredata, Wilanów, Warsaw Masovian district Poland, PL.
 
-Country
-: refers to Poland
+**Country** - refers to Poland
 
-Website
-: refers to Coredata website, accessible from [https://coredata.pl](https://coredata.pl)
+**Website** - refers to Coredata website, accessible from [https://coredata.pl](https://coredata.pl)
 
-Service
-: refers to any service or application developed and provided by the Company including the Website
+**Service** - refers to any service or application developed and provided by the Company including the Website
 
-Device
-: means any device that can access the Service such as a computer, a cellphone or a digital tablet
+**Device** - means any device that can access the Service such as a computer, a cellphone or a digital tablet
 
-You
-: means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable
+**You** - means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable
 
 ## Acknowledgment
 

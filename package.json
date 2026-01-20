@@ -13,10 +13,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dompurify": "^3.3.1",
     "expo-jwt": "1.8.2",
+    "marked": "^17.0.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router": "^7.9.3"
+    "react-router": "^7.9.6"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.5",

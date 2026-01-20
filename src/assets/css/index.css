@@ -93,3 +93,16 @@ a:hover {
   width: 24px;
   transform: translate(0px, -9px) rotate(-90deg);
 }
+
+.document-content h1 {
+  @apply text-4xl font-bold mt-8 mb-4;
+}
+.document-content h2 {
+  @apply text-xl font-bold mt-8 mb-4;
+}
+.document-content hr {
+  @apply my-8 border-t border-slate-300;
+}
+.document-content p {
+  @apply mb-4;
+}

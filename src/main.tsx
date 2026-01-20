@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "./components/App.tsx";
-import Privacy from "./components/Privacy.tsx";
-import Terms from "./components/Terms.tsx";
+import Document from "./components/Document.tsx";
 import ErrorBoundary from "./components/ui/ErrorBoundary.tsx";
 import NotFound from "./components/ui/NotFound.tsx";
 
@@ -18,11 +17,11 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/privacy",
-		element: <Privacy />,
+		element: <Document type="privacy" />,
 	},
 	{
 		path: "/terms",
-		element: <Terms />,
+		element: <Document type="terms" />,
 	},
 	{
 		path: "*",
