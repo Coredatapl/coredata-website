@@ -26,6 +26,9 @@ a {
 a:hover {
   color: #3d91fc;
 }
+.color-background a:hover {
+  @apply text-slate-300;
+}
 
 .svg-banner {
   margin-top: -1px;

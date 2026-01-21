@@ -86,7 +86,7 @@ export default function Contact() {
 	return (
 		<Section id={AppComponents.contact} bgColor="bg-slate-100">
 			<div className="relative flex flex-wrap -mb-10 z-10 justify-center text-left bg-white shadow-xl rounded-lg overflow-hidden">
-				<div className="relative z-0 hidden lg:flex flex-col w-1/2 xl:w-2/3 px-6 md:px-8 py-4 lg:py-8 bg-brand-violet text-white">
+				<div className="relative z-0 hidden lg:flex flex-col w-1/2 xl:w-2/3 px-6 md:px-8 py-4 lg:py-8 bg-brand-violet text-white color-background">
 					<Header message="Contact information" theme={AppTheme.Light} />
 					<div>
 						<p className="leading-relaxed mt-4 mb-4">
@@ -110,7 +110,10 @@ export default function Contact() {
 							<div className="h-10 w-10 mr-2 p-2 text-xl text-white font-normal outline-none focus:outline-none">
 								<i className={`fi fi-sr-envelope inline-block ml-1`}></i>
 							</div>
-							<a href="mailto:hello@coredata.pl" className="pl-2">
+							<a
+								href="mailto:hello@coredata.pl"
+								className="pl-2 hover:text-slate-300"
+							>
 								hello@coredata.pl
 							</a>
 						</div>

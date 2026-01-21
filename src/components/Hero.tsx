@@ -29,7 +29,6 @@ export default function Hero() {
 						digital development and building a technological advantage.
 					</p>
 					<div className="relative flex w-50 h-12 mt-12">
-						<div className="absolute inline-flex h-full w-full rounded-lg bg-indigo-600 opacity-5 animate-ping"></div>
 						<div className="relative inline-flex">
 							<Button
 								type="button"

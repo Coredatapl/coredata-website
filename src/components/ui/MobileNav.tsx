@@ -102,14 +102,14 @@ export default function MobileNav({ opened }: MobileNavProps) {
 						</div>
 						<div className="mt-2">
 							<MobileNavItem
-								id={AppComponents.ai}
+								id={AppComponents.documents}
 								to={"/"}
 								label="Documents Processing"
 							/>
 						</div>
 						<div className="mt-2">
 							<MobileNavItem
-								id={AppComponents.ai}
+								id={AppComponents.knowledge}
 								to={"/"}
 								label="Knowledge Base"
 							/>

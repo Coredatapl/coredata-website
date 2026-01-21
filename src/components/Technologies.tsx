@@ -7,6 +7,7 @@ import imgIconNode from "../assets/img/icons/icon-nodejs.svg";
 import imgIconOpenai from "../assets/img/icons/icon-openai.svg";
 import imgIconPython from "../assets/img/icons/icon-python.svg";
 import imgIconReact from "../assets/img/icons/icon-react.svg";
+import imgIconSupabase from "../assets/img/icons/icon-supabase.svg";
 import imgIconTypescript from "../assets/img/icons/icon-typescript.svg";
 import { AppComponents } from "../utils/common";
 import Caption from "./ui/Caption";
@@ -20,15 +21,16 @@ export default function Technologies() {
 			bgColor="bg-slate-100"
 			style="relative"
 		>
-			<div className="flex flex-wrap items-center text-left mb-20">
-				<div className="hidden lg:block w-6/12 px-4">
+			<div className="relative flex flex-wrap items-center text-left mb-20">
+				<div className="relative hidden lg:block z-10 w-6/12">
 					<div className="justify-center flex flex-wrap relative">
-						<div className="my-4 w-6/12 px-4">
+						<div className="my-4 w-6/12">
 							<a
 								href="https://nodejs.org/"
 								target="_blank"
 								rel="noreferrer"
 								aria-label="NodeJS"
+								title="NodeJS"
 								className="flex justify-end -mb-4"
 							>
 								<img src={imgIconNode} alt="NodeJS" />
@@ -39,6 +41,7 @@ export default function Technologies() {
 									target="_blank"
 									rel="noreferrer"
 									aria-label="Python"
+									title="Python"
 								>
 									<img src={imgIconPython} alt="Python" />
 								</a>
@@ -47,37 +50,61 @@ export default function Technologies() {
 									target="_blank"
 									rel="noreferrer"
 									aria-label="Typescript"
+									title="Typescript"
 									className="mt-4 -mr-4"
 								>
 									<img src={imgIconTypescript} alt="Typescript" />
 								</a>
 							</div>
-							<a
-								href="https://angular.io/"
-								target="_blank"
-								rel="noreferrer"
-								aria-label="Angular"
-								className="flex justify-end"
-							>
-								<img src={imgIconAngular} alt="Angular" />
-							</a>
+							<div className="flex justify-start mb-4">
+								<a
+									href="https://angular.io/"
+									target="_blank"
+									rel="noreferrer"
+									aria-label="Angular"
+									title="Angular"
+									className="mr-4"
+								>
+									<img
+										src={imgIconAngular}
+										alt="Angular"
+										className="w-28 mr-4"
+									/>
+								</a>
+								<a
+									href="https://supabase.com/"
+									target="_blank"
+									rel="noreferrer"
+									aria-label="Supabase"
+									title="Supabase"
+									className="mt-4 ml-4"
+								>
+									<img src={imgIconSupabase} alt="Supabase" className="w-40" />
+								</a>
+							</div>
 							<div className="flex justify-start mb-4">
 								<a
 									href="https://n8n.io/"
 									target="_blank"
 									rel="noreferrer"
 									aria-label="n8n"
+									title="n8n"
 								>
-									<img src={imgIconN8n} alt="n8n" className="w-28" />
+									<img src={imgIconN8n} alt="n8n" className="w-24 ml-10" />
 								</a>
 								<a
 									href="https://openai.com/"
 									target="_blank"
 									rel="noreferrer"
 									aria-label="OpenAI"
+									title="OpenAI"
 									className="flex justify-end -mr-20"
 								>
-									<img src={imgIconOpenai} alt="OpenAI" className="w-48" />
+									<img
+										src={imgIconOpenai}
+										alt="OpenAI"
+										className="w-36 ml-10"
+									/>
 								</a>
 							</div>
 						</div>
@@ -87,11 +114,12 @@ export default function Technologies() {
 								target="_blank"
 								rel="noreferrer"
 								aria-label="Javascript"
+								title="Javascript"
 							>
 								<img
 									src={imgIconJavascript}
 									alt="Javascript"
-									className="ml-4"
+									className="ml-4 w-24"
 								/>
 							</a>
 							<a
@@ -99,17 +127,28 @@ export default function Technologies() {
 								target="_blank"
 								rel="noreferrer"
 								aria-label="React"
+								title="React"
+								className="mt-4"
 							>
-								<img src={imgIconReact} alt="React" className="w-32" />
+								<img
+									src={imgIconReact}
+									alt="React"
+									className="w-32 ml-2 mt-6"
+								/>
 							</a>
 							<a
 								href="https://dotnet.microsoft.com/"
 								target="_blank"
 								rel="noreferrer"
 								aria-label=".NET"
+								title=".NET"
 								className="flex mt-4 pl-4"
 							>
-								<img src={imgIconDotnet} alt=".NET" className="ml-4" />
+								<img
+									src={imgIconDotnet}
+									alt=".NET"
+									className="w-28 ml-4 mt-6"
+								/>
 							</a>
 						</div>
 					</div>

@@ -1,6 +1,6 @@
 import imgAutomationProcess from "../assets/img/automation-process.png";
 import imgDocuments from "../assets/img/documents-flow.png";
-import imgKnowledge from "../assets/img/knowledge.jpg";
+import imgKnowledge from "../assets/img/knowledge.png";
 import imgAutomation from "../assets/img/workflow.jpg";
 import { AppComponents, AppTheme } from "../utils/common";
 import Caption from "./ui/Caption";
@@ -60,7 +60,10 @@ export default function Ai() {
 				</div>
 			</div>
 
-			<div className="flex flex-wrap justify-between items-center text-left">
+			<div
+				id={AppComponents.documents}
+				className="flex flex-wrap pt-20 justify-between items-center text-left"
+			>
 				<div className="w-full lg:w-6/12 px-4 mb-20">
 					<Caption
 						message="Documents"
@@ -91,18 +94,21 @@ export default function Ai() {
 				</div>
 			</div>
 
-			<div className="flex flex-wrap justify-between items-center text-left mb-20">
-				<div className="hidden lg:block w-5/12 px-4">
+			<div
+				id={AppComponents.knowledge}
+				className="flex flex-wrap pt-20 justify-between items-center text-left"
+			>
+				<div className="hidden lg:block w-6/12 px-4">
 					<div className="relative flex flex-col w-full mb-6">
 						<img
 							alt="Knowledge base illustration"
-							className="max-w-full rounded-lg shadow-lg"
+							className="max-w-full rounded-lg"
 							src={imgKnowledge}
 						/>
 					</div>
 				</div>
 
-				<div className="w-full lg:w-7/12 px-10 mb-20">
+				<div className="w-full lg:w-6/12 px-10 mb-20">
 					<Caption
 						message="Knowledge"
 						color="brand-violet"
