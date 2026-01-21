@@ -108,7 +108,8 @@ export default function Form({
 		setProcessing(true);
 		setResult(undefined);
 
-		const data = new FormData(event.currentTarget);
+		const form = event.currentTarget;
+		const data = new FormData(form);
 		const valid = validate(data);
 		if (!valid) {
 			setProcessing(false);
@@ -118,6 +119,10 @@ export default function Form({
 		const result = await onSubmit(data);
 		setProcessing(false);
 		setResult(result);
+
+		if (result.type === "success") {
+			form.reset();
+		}
 	}
 
 	function resetForm() {

@@ -1,0 +1,15 @@
+{
+  "no-inline-html": {
+    "allowed_elements": [
+      "div",
+      "img",
+      "a",
+      "br",
+      "sub",
+      "sup"
+    ]
+  },
+  "line-length": {
+    "line_length": 350
+  }
+}
