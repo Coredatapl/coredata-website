@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useLoading } from "../hooks/useLoading";
 import About from "./About";
 import Ai from "./Ai";
@@ -12,27 +13,37 @@ import Technologies from "./Technologies";
 import Loading from "./ui/Loading";
 
 interface AppProps {
-	loaded?: boolean;
+  loaded?: boolean;
 }
 
 export default function App({ loaded = false }: AppProps) {
-	const { loading } = useLoading();
+  const { loading } = useLoading();
 
-	if (!loaded && loading) {
-		return <Loading />;
-	}
+  useEffect(() => {
+    console.clear();
+    console.log(
+      "%cCoredata Website is %crunning%c. Welcome in Coredata Terminal!",
+      "color: inherit;",
+      "color: #7C3AED; font-weight: bold;",
+      "color: inherit;",
+    );
+  }, []);
 
-	return (
-		<AppView>
-			<Navbar />
-			<Hero />
-			<About />
-			<Apps />
-			<Ai />
-			<Consultations />
-			<Technologies />
-			<Contact />
-			<Footer />
-		</AppView>
-	);
+  if (!loaded && loading) {
+    return <Loading />;
+  }
+
+  return (
+    <AppView>
+      <Navbar />
+      <Hero />
+      <About />
+      <Apps />
+      <Ai />
+      <Consultations />
+      <Technologies />
+      <Contact />
+      <Footer />
+    </AppView>
+  );
 }
