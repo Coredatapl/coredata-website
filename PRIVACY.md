@@ -80,6 +80,4 @@ If you have any questions about this Privacy Policy, You can contact us by email
 
 Find out more at [coredata.pl](https://coredata.pl)
 
-<sup>&copy; 2026</sup>
-
-![Coredata-logo](/public/img/logo-color.png)
+<sup>**Coredata** &copy; 2026</sup>

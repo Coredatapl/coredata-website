@@ -70,6 +70,4 @@ If you have any questions about our Terms and Conditions, You can contact us by 
 
 Find out more at [coredata.pl](https://coredata.pl)
 
-<sup>&copy; 2026</sup>
-
-![Coredata-logo](/public/img/logo-color.png)
+<sup>**Coredata** &copy; 2026</sup>

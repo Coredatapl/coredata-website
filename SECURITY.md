@@ -60,6 +60,4 @@ For questions, contact [hello&#64;coredata.pl](hello@coredata.pl)
 
 Find out more at [coredata.pl](https://coredata.pl)
 
-<sup>&copy; 2026</sup>
-
-![Coredata-logo](/public/img/logo-color.png)
+<sup>**Coredata** &copy; 2026</sup>
