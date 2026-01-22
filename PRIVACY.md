@@ -14,7 +14,7 @@ We use Your Personal data to provide and improve the Service. By using the Servi
 
 For the purposes of this Privacy Policy:
 
-**Company** - (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Coredata, Wilanów, Warsaw Masovian district Poland, PL.
+**Company** - (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Coredata, Warsaw, Masovian district Poland, PL.
 
 **Cookies** - are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.
 
@@ -80,6 +80,4 @@ If you have any questions about this Privacy Policy, You can contact us by email
 
 Find out more at [coredata.pl](https://coredata.pl)
 
-<sup>&copy; 2026</sup>
-
-![Coredata-logo](/public/img/logo-color.png)
+<sup>**Coredata** &copy; 2026</sup>

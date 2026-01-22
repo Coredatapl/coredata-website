@@ -11,6 +11,8 @@ import Hero from "./Hero";
 import Navbar from "./Navbar";
 import Technologies from "./Technologies";
 import Loading from "./ui/Loading";
+import { useLocation } from "react-router";
+import { useUi } from "../hooks/useUi";
 
 interface AppProps {
   loaded?: boolean;
@@ -18,16 +20,23 @@ interface AppProps {
 
 export default function App({ loaded = false }: AppProps) {
   const { loading } = useLoading();
+  const { scrollTo } = useUi();
+  const location = useLocation();
+  const hash = location.hash.replace("#", "");
 
   useEffect(() => {
     console.clear();
     console.log(
-      "%cCoredata Website is %crunning%c. Welcome in Coredata Terminal!",
+      "%cCoredata Website is %crunning%c. All issues will be logged in this console.",
       "color: inherit;",
       "color: #7C3AED; font-weight: bold;",
       "color: inherit;",
     );
-  }, []);
+
+    if (hash) {
+      scrollTo(hash);
+    }
+  }, [hash, scrollTo]);
 
   if (!loaded && loading) {
     return <Loading />;

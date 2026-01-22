@@ -10,7 +10,7 @@ This document outlines basic security practices for our organization, focusing o
 
 ## Definitions
 
-**Company** - (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Coredata, Wilanów, Warsaw Masovian district Poland, PL.
+**Company** - (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Coredata, Warsaw, Masovian district Poland, PL.
 
 **Website** - refers to Coredata website, accessible from [https://coredata.pl](https://coredata.pl)
 
@@ -60,6 +60,4 @@ For questions, contact [hello&#64;coredata.pl](hello@coredata.pl)
 
 Find out more at [coredata.pl](https://coredata.pl)
 
-<sup>&copy; 2026</sup>
-
-![Coredata-logo](/public/img/logo-color.png)
+<sup>**Coredata** &copy; 2026</sup>
