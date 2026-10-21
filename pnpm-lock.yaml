@@ -32,7 +32,7 @@ importers:
         version: 2.2.5
       '@tailwindcss/vite':
         specifier: ^4.1.14
-        version: 4.1.14(vite@7.3.5(jiti@2.6.1)(lightningcss@1.30.1))
+        version: 4.1.14(vite@7.3.7(jiti@2.6.1)(lightningcss@1.30.1))
       '@types/react':
         specifier: 19.2.9
         version: 19.2.9
@@ -41,7 +41,7 @@ importers:
         version: 19.2.3(@types/react@19.2.9)
       '@vitejs/plugin-react-swc':
         specifier: 4.2.2
-        version: 4.2.2(vite@7.3.5(jiti@2.6.1)(lightningcss@1.30.1))
+        version: 4.2.2(vite@7.3.7(jiti@2.6.1)(lightningcss@1.30.1))
       globals:
         specifier: ^15.9.0
         version: 15.15.0
@@ -52,8 +52,8 @@ importers:
         specifier: ^5.5.3
         version: 5.9.3
       vite:
-        specifier: 7.3.5
-        version: 7.3.5(jiti@2.6.1)(lightningcss@1.30.1)
+        specifier: 7.3.7
+        version: 7.3.7(jiti@2.6.1)(lightningcss@1.30.1)
 
 packages:
 
@@ -834,8 +834,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  vite@7.3.5:
-    resolution: {integrity: sha512-KuOaNhcnGFN2zIPGA7wRmzF+lJA1sea7rHq17aiJ++9lzY1WWG6Jpwqwe1KNbRVPIqHmr8GLYx7jbrQcN/7/ww==}
+  vite@7.3.7:
+    resolution: {integrity: sha512-AHEzTORMbi7/7aXp7w7KZ5+DCUdSeLsJz0grY8xHpc9DHdYb0vQu6DqJfm2tOw3gDExNgPgnJTXxM6syYFHaCA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1209,12 +1209,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.14
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.14
 
-  '@tailwindcss/vite@4.1.14(vite@7.3.5(jiti@2.6.1)(lightningcss@1.30.1))':
+  '@tailwindcss/vite@4.1.14(vite@7.3.7(jiti@2.6.1)(lightningcss@1.30.1))':
     dependencies:
       '@tailwindcss/node': 4.1.14
       '@tailwindcss/oxide': 4.1.14
       tailwindcss: 4.1.14
-      vite: 7.3.5(jiti@2.6.1)(lightningcss@1.30.1)
+      vite: 7.3.7(jiti@2.6.1)(lightningcss@1.30.1)
 
   '@types/estree@1.0.9': {}
 
@@ -1229,11 +1229,11 @@ snapshots:
   '@types/trusted-types@2.0.7':
     optional: true
 
-  '@vitejs/plugin-react-swc@4.2.2(vite@7.3.5(jiti@2.6.1)(lightningcss@1.30.1))':
+  '@vitejs/plugin-react-swc@4.2.2(vite@7.3.7(jiti@2.6.1)(lightningcss@1.30.1))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.47
       '@swc/core': 1.13.5
-      vite: 7.3.5(jiti@2.6.1)(lightningcss@1.30.1)
+      vite: 7.3.7(jiti@2.6.1)(lightningcss@1.30.1)
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -1438,7 +1438,7 @@ snapshots:
 
   typescript@5.9.3: {}
 
-  vite@7.3.5(jiti@2.6.1)(lightningcss@1.30.1):
+  vite@7.3.7(jiti@2.6.1)(lightningcss@1.30.1):
     dependencies:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.4)
