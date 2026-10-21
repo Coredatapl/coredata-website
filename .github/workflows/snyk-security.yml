@@ -26,29 +26,37 @@ jobs:
       - uses: actions/checkout@master
       - name: Setup pnpm
         uses: pnpm/action-setup@a3252b78c470c02df07e9d59298aecedc3ccdd6d # v3
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        if: ${{ env.SNYK_TOKEN != '' }}
         with:
           version: 8
-        if: ${{ secrets.SNYK_TOKEN != '' }}
       - name: Setup NodeJS
         uses: actions/setup-node@v4
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        if: ${{ env.SNYK_TOKEN != '' }}
         with:
           node-version: 20
           cache: "pnpm"
-        if: ${{ secrets.SNYK_TOKEN != '' }}
       - name: Install dependencies
         run: pnpm install
-        if: ${{ secrets.SNYK_TOKEN != '' }}
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        if: ${{ env.SNYK_TOKEN != '' }}
       - name: Run Snyk scan
         uses: snyk/actions/node@9adf32b1121593767fc3c057af55b55db032dc04 # master
         continue-on-error: true # To make sure that SARIF upload gets called
-        if: ${{ secrets.SNYK_TOKEN != '' }}
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        if: ${{ env.SNYK_TOKEN != '' }}
         with:
           args: --sarif-file-output=snyk.sarif
 
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v3
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        if: ${{ env.SNYK_TOKEN != '' }}
         with:
           sarif_file: snyk.sarif
-        if: ${{ secrets.SNYK_TOKEN != '' }}
