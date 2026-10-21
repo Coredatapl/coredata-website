@@ -7,7 +7,7 @@ interface LogoProps {
 	style?: LogoStyle;
 }
 
-export default function Logo({ style = "color" }: LogoProps) {
+export default function BrandLogo({ style = "color" }: LogoProps) {
 	return (
 		<div className="flex">
 			<img

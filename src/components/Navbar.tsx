@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { useUi } from "../hooks/useUi";
 import { AppComponents } from "../utils/common";
-import Logo from "./ui/Logo";
+import BrandLogo from "./ui/BrandLogo";
 import TopNav from "./ui/TopNav";
 
 interface NavbarProps {
@@ -18,7 +18,7 @@ export default function Navbar({ showNav }: NavbarProps) {
 		>
 			<div className="container flex w-11/12 md:w-8/12 py-4 mx-auto justify-between items-start">
 				<Link to={"/"} onClick={() => scrollTop()} className="mt-2">
-					<Logo />
+					<BrandLogo />
 				</Link>
 				<TopNav showNav={showNav} />
 			</div>
