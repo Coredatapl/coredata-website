@@ -1,10 +1,11 @@
 import { Link } from "react-router";
 import iconGithub from "../assets/img/icons/icon-github.svg";
 import iconLinkedin from "../assets/img/icons/icon-linkedin.svg";
+import imgSymbolLight from "../assets/img/symbol-light.svg";
 import { AppComponents } from "../utils/common";
-import Logo from "./ui/Logo";
 import Spacer from "./ui/Spacer";
 import NavItem from "./ui/NavItem";
+import BrandSymbol from "./ui/BrandSymbol";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -12,14 +13,14 @@ export default function Footer() {
   const nipNumber = 7971953479;
 
   return (
-    <footer className="relative flex w-full py-10 pt-20 bg-slate-200">
+    <footer className="relative flex w-full py-10 pt-20 overflow-hidden bg-slate-200">
       <Spacer color={"text-slate-100"} fillColor={"fill-slate-200"} />
       <div className="container flex flex-row w-11/12 lg:w-8/12 py-4 mx-auto justify-between items-start">
         <div className="flex flex-col">
           <div className="flex flex-row ">
             <div className="hidden md:flex flex-col xl:pr-10 2xl:pr-20">
-              <Logo />
-              <h5 className="font-semibold pt-10">Get in touch today!</h5>
+              <BrandSymbol />
+              <h5 className="font-semibold pt-4">Get in touch today!</h5>
               <a href="mailto:hello@coredata.pl">
                 <p className="">hello@coredata.pl</p>
               </a>
@@ -121,6 +122,13 @@ export default function Footer() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="absolute -bottom-72 -right-40 -z-0 overflow-hidden opacity-20">
+        <img
+          className="relative w-3xl min-w-20"
+          src={imgSymbolLight}
+          alt="Coredata"
+        />
       </div>
     </footer>
   );

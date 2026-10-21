@@ -1,6 +1,6 @@
 # Coredata Official Website
 
-![Coredata-logo](/public/img/logo-color.png)
+![Coredata-logo](/public/img/icons/logo192.png)
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![Maintainability](https://qlty.sh/gh/Coredatapl/projects/coredata-website/maintainability.svg)](https://qlty.sh/gh/Coredatapl/projects/coredata-website)
 
