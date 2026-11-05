@@ -7,10 +7,15 @@ export enum AppComponents {
 	about = "about",
 	apps = "apps",
 	ai = "ai",
+	decisions = "decisions",
+	process = "process",
 	documents = "documents",
 	knowledge = "knowledge",
 	consultations = "consultations",
+	support = "support",
+	usecases = "usecases",
 	technologies = "technologies",
+	security = "security",
 	contact = "contact",
 }
 

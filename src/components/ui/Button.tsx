@@ -17,7 +17,7 @@ export default function Button({
 		if (!icon) return null;
 		return (
 			<i
-				className={`${icon} inline-block align-middle my-auto mt-1 ${iconLeft && "mr-2"} ${iconLeft ? "group-hover:-translate-x-1" : "group-hover:translate-x-1"} transition-transform duration-300 ease-in-out`}
+				className={`fi ${icon} inline-block align-middle my-auto mt-1 ${iconLeft && "mr-2"} ${iconLeft ? "group-hover:-translate-x-1" : "group-hover:translate-x-1"} transition-transform duration-300 ease-in-out`}
 			></i>
 		);
 	}

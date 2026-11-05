@@ -6,7 +6,7 @@ interface SubHeaderProps {
 export default function SubHeader({ message, color = "" }: SubHeaderProps) {
 	return (
 		<h3
-			className={`w-full mb-2 text-xl font-semibold text-shadow-xs${color ? ` ${color}` : ""}`}
+			className={`w-full mb-2 text-xl font-semibold tracking-wide text-shadow-xs${color ? ` ${color}` : ""}`}
 		>
 			{message}
 		</h3>

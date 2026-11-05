@@ -3,11 +3,26 @@
 @theme {
   --color-brand-blue: #3d91fc;
   --color-brand-violet: #5e72e4;
+  --color-brand-sky: #01bec3;
+  --color-brand-green: #37cd7e;
+  --color-diagram-board: #222222;
 
   --spacing-100-px: 100px;
   --spacing-450-px: 450px;
   --spacing-850-px: 850px;
   --spacing-860-px: 860px;
+
+  --animate-blink: blink 1s steps(1, start) infinite;
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
 }
 
 @custom-variant hover (&:hover);
@@ -108,4 +123,13 @@ a:hover {
 }
 .document-content p {
   @apply mb-4;
+}
+
+.bg-dot-grid-dark {
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 1px,
+    rgba(0, 0, 0, 0) 1.5px
+  );
+  background-size: 8px 8px;
 }

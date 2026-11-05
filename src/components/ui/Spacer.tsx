@@ -6,7 +6,7 @@ interface SpacerProps {
 export default function Spacer({ color, fillColor }: SpacerProps) {
 	return (
 		<div
-			className="absolute flex flex-col w-full h-20 top-0 bottom-auto left-0 right-0 -mt-20 p-0 overflow-hidden"
+			className="absolute z-0 flex flex-col w-full h-20 top-0 bottom-auto left-0 right-0 -mt-20 p-0 overflow-hidden"
 			style={{ transform: "translateZ(0)" }}
 		>
 			<svg

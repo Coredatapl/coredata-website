@@ -10,19 +10,19 @@ export default function Hero() {
 
 	return (
 		<Section id={AppComponents.hero} bgColor="bg-slate-100">
-			<div className="flex w-full lg:w-6/12 md:h-screen max-h-860-px text-left justify-items-start">
+			<div className="flex w-full lg:w-6/12 md:h-screen max-h-860-px justify-items-start text-left text-blueGray-500">
 				<div className="relative z-10 container flex flex-col my-32 md:my-auto items-start">
 					<Title>
-						Optimize your{" "}
-						<span className="inline-block bg-linear-to-r font-semibold text-transparent from-brand-blue via-brand-violet to-indigo-600 bg-clip-text text-shadow-none">
-							business
+						<span className="inline-block bg-linear-to-r font-bold text-transparent from-brand-blue via-brand-violet to-indigo-600 bg-clip-text text-shadow-none">
+							AI Solutions
 						</span>
 					</Title>
+					<Title>That Make Sense</Title>
 					<Header
 						message="We are creating the future of technology with AI innovations."
 						className="mt-4"
 					/>
-					<p className="mt-2 text-lg leading-relaxed text-blueGray-500">
+					<p className="mt-2 text-lg leading-relaxed">
 						We specialize in designing scalable web applications, implementing
 						AI-based solutions, and automating business processes. Thanks to the
 						experience of our experts in IT consulting, we support businesses in
@@ -33,7 +33,7 @@ export default function Hero() {
 							<Button
 								type="button"
 								label="Find out more"
-								icon="fi fi-sr-arrow-right"
+								icon="fi-sr-arrow-right"
 								onClick={() => scrollTo(AppComponents.about)}
 							/>
 						</div>

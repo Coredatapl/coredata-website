@@ -55,6 +55,13 @@ export default function MobileNav({ opened }: MobileNavProps) {
 						</li>
 						<li className="mr-10 my-5">
 							<MobileNavItem
+								id={AppComponents.usecases}
+								to={"/"}
+								label="Use Cases"
+							/>
+						</li>
+						<li className="mr-10 my-5">
+							<MobileNavItem
 								id={AppComponents.consultations}
 								to={"/"}
 								label="IT Consultations"
@@ -78,8 +85,8 @@ export default function MobileNav({ opened }: MobileNavProps) {
 				</div>
 				<div className="flex flex-col w-1/2 justify-start text-sm">
 					<div className="flex flex-col mb-10 max-w-40">
-						<div className="font-semibold text-base">Info</div>
-						<div className="mt-4">
+						<div className="mb-2 font-semibold text-base">Info</div>
+						<div className="mt-2">
 							<MobileNavItem
 								id={AppComponents.about}
 								to={"/"}
@@ -88,16 +95,23 @@ export default function MobileNav({ opened }: MobileNavProps) {
 						</div>
 						<div className="mt-2">
 							<MobileNavItem
-								id={AppComponents.apps}
+								id={AppComponents.process}
 								to={"/"}
-								label="Web apps"
+								label="Our process"
 							/>
 						</div>
 						<div className="mt-2">
 							<MobileNavItem
 								id={AppComponents.apps}
 								to={"/"}
-								label="Mobile apps"
+								label="Products"
+							/>
+						</div>
+						<div className="mt-2">
+							<MobileNavItem
+								id={AppComponents.decisions}
+								to={"/"}
+								label="Decision Making"
 							/>
 						</div>
 						<div className="mt-2">
@@ -114,10 +128,17 @@ export default function MobileNav({ opened }: MobileNavProps) {
 								label="Knowledge Base"
 							/>
 						</div>
+						<div className="mt-2">
+							<MobileNavItem
+								id={AppComponents.security}
+								to={"/"}
+								label="Security"
+							/>
+						</div>
 					</div>
 					<div className="flex flex-col text-sm">
-						<div className="font-semibold text-base">Company</div>
-						<div className="mt-4">
+						<div className="mb-2 font-semibold text-base">Company</div>
+						<div className="mt-2">
 							<MobileNavItem to={"/privacy"} label="Privacy Policy" />
 						</div>
 						<div className="mt-2">

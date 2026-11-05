@@ -8,6 +8,7 @@ import NotFound from "./components/ui/NotFound.tsx";
 
 import "./assets/css/index.css";
 import "./assets/css/fonts.css";
+import "./assets/css/uicons.css";
 
 const router = createBrowserRouter([
 	{

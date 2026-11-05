@@ -14,12 +14,12 @@ export default function Header({
 	function getTheme() {
 		switch (theme) {
 			case AppTheme.Light:
-				return "text-white shadow-gray-600";
+				return "text-white shadow-gray-500";
 			case AppTheme.Color:
 				return "text-brand-blue shadow-gray-100";
 			case AppTheme.Dark:
 			default:
-				return "shadow-gray-200";
+				return "shadow-gray-200 shadow-gray-300";
 		}
 	}
 

@@ -1,18 +1,32 @@
+import imgDatacenter from "../assets/img/datacenter.webp";
 import imgIconAngular from "../assets/img/icons/icon-angular.svg";
 import imgIconDotnet from "../assets/img/icons/icon-dotnet.svg";
 import imgIconJavascript from "../assets/img/icons/icon-javascript.svg";
 import imgIconN8n from "../assets/img/icons/icon-n8n.svg";
-
 import imgIconNode from "../assets/img/icons/icon-nodejs.svg";
 import imgIconOpenai from "../assets/img/icons/icon-openai.svg";
 import imgIconPython from "../assets/img/icons/icon-python.svg";
 import imgIconReact from "../assets/img/icons/icon-react.svg";
 import imgIconSupabase from "../assets/img/icons/icon-supabase.svg";
 import imgIconTypescript from "../assets/img/icons/icon-typescript.svg";
+import imgLogoAikido from "../assets/img/logos/aikido.webp";
+import imgLogoCert from "../assets/img/logos/cert.webp";
+import imgLogoGithubCopilot from "../assets/img/logos/github-copilot.webp";
+import imgLogoOwasp from "../assets/img/logos/owasp.webp";
+import imgLogoQlty from "../assets/img/logos/qlty.webp";
+import imgLogoSentry from "../assets/img/logos/sentry.webp";
+import imgLogoSnyk from "../assets/img/logos/snyk.webp";
+import imgLogoSonar from "../assets/img/logos/sonar.webp";
+import Console from "../features/console/components/Console";
+import ConsoleCommand from "../features/console/components/ConsoleCommand";
+import ConsoleOutput from "../features/console/components/ConsoleOutput";
 import { AppComponents } from "../utils/common";
+import BulletPoint from "./ui/BulletPoint";
 import Caption from "./ui/Caption";
 import Header from "./ui/Header";
+import NavItem from "./ui/NavItem";
 import Section from "./ui/Section";
+import Spacer from "./ui/Spacer";
 
 export default function Technologies() {
 	return (
@@ -21,6 +35,7 @@ export default function Technologies() {
 			bgColor="bg-slate-100"
 			style="relative"
 		>
+			<Spacer color={"text-slate-100"} fillColor={"fill-slate-100"} />
 			<div className="relative flex flex-wrap items-center text-left mb-20">
 				<div className="relative hidden lg:block z-10 w-6/12">
 					<div className="justify-center flex flex-wrap relative">
@@ -156,54 +171,273 @@ export default function Technologies() {
 
 				<div className="w-full lg:w-6/12 lg:px-4">
 					<Caption message="Technology" />
-					<Header message="Technologies we use" />
+					<Header message="Technology stack" />
 					<p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-						We use the latest technologies in our projects. We always care about
-						the safety of the solutions we create. It is also important for us
-						to control and maintain a high level of quality of our applications.
+						We build our solutions using only the latest, most reliable
+						technologies available on the market. Maintaining the highest
+						standards of software quality and performance is always our absolute
+						priority.
 					</p>
 					<p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-						With Agile development, CI/CD pipelines, DevOps approach, and a
-						balanced mix of manual and automated testing
+						To ensure flawless delivery, we combine rigorous manual and
+						automated testing with robust CI/CD pipelines for seamless
+						deployment.
 					</p>
 					<p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-						We deliver cost-effective products thanks to the use of ready-made
-						components (frameworks, platforms, and services), and public APIs.
+						Operating strictly within the Agile methodology, we remain highly
+						adaptable to your evolving needs while maintaining complete
+						transparency at every stage of development.
 					</p>
 				</div>
 			</div>
 
-			<div className="absolute -bottom-96 right-0 -z-0 w-full overflow-hidden opacity-50">
-				<svg
-					width="1980"
-					height="1024"
-					viewBox="0 0 2080 800"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						opacity="1"
-						d="M0 1041.36C249.126 1041.36 719.224 1028.66 1382.03 776.716C2094.01 506.11 2453.81 453.126 2891 454.306C3328.19 453.126 3687.99 506.11 4399.97 776.716C5062.78 1028.66 5532.87 1041.36 5782 1041.36M0 1041.92C437.187 1040.74 796.988 1093.72 1508.97 1364.33C2171.78 1616.27 2641.87 1628.97 2891 1628.97C3140.13 1628.97 3610.22 1616.27 4273.03 1364.33C4985.01 1093.72 5344.81 1040.74 5782 1041.92M0 965.08C249.126 965.08 719.224 952.378 1382.03 700.438C2094.01 429.832 2453.81 376.848 2891 378.028C3328.19 376.848 3687.99 429.832 4399.97 700.438C5062.78 952.378 5532.87 965.08 5782 965.08M0 965.671C437.187 964.491 796.988 1017.48 1508.97 1288.08C2171.78 1540.02 2641.87 1552.72 2891 1552.72C3140.13 1552.72 3610.22 1540.02 4273.03 1288.08C4985.01 1017.48 5344.81 964.491 5782 965.671M0 892.281C249.126 892.281 719.224 879.579 1382.03 627.639C2094.01 357.033 2453.81 304.049 2891 305.229C3328.19 304.049 3687.99 357.033 4399.97 627.639C5062.78 879.579 5532.87 892.281 5782 892.281M0 892.84C437.187 891.66 796.988 944.644 1508.97 1215.25C2171.78 1467.19 2641.87 1479.89 2891 1479.89C3140.13 1479.89 3610.22 1467.19 4273.03 1215.25C4985.01 944.644 5344.81 891.66 5782 892.84M0 816.873C249.126 816.873 719.224 804.171 1382.03 552.231C2094.01 281.626 2453.81 228.641 2891 229.821C3328.19 228.641 3687.99 281.626 4399.97 552.231C5062.78 804.171 5532.87 816.873 5782 816.873M0 817.464C437.187 816.283 796.988 869.268 1508.97 1139.87C2171.78 1391.81 2641.87 1404.52 2891 1404.52C3140.13 1404.52 3610.22 1391.81 4273.03 1139.87C4985.01 869.268 5344.81 816.283 5782 817.464M0 741.465C249.126 741.465 719.224 728.763 1382.03 476.823C2094.01 206.217 2453.81 153.233 2891 154.413C3328.19 153.233 3687.99 206.217 4399.97 476.823C5062.78 728.763 5532.87 741.465 5782 741.465M0 742.056C437.187 740.875 796.988 793.86 1508.97 1064.47C2171.78 1316.4 2641.87 1329.11 2891 1329.11C3140.13 1329.11 3610.22 1316.4 4273.03 1064.47C4985.01 793.86 5344.81 740.875 5782 742.056M0 666.057C249.126 666.057 719.224 653.355 1382.03 401.415C2094.01 130.809 2453.81 77.825 2891 79.0052C3328.19 77.825 3687.99 130.809 4399.97 401.415C5062.78 653.355 5532.87 666.057 5782 666.057M0 666.648C437.187 665.467 796.988 718.452 1508.97 989.057C2171.78 1241 2641.87 1253.7 2891 1253.7C3140.13 1253.7 3610.22 1241 4273.03 989.057C4985.01 718.452 5344.81 665.467 5782 666.648M0 588.04C249.126 588.04 719.224 575.338 1382.03 323.398C2094.01 52.7925 2453.81 -0.191873 2891 0.988318C3328.19 -0.191873 3687.99 52.7925 4399.97 323.398C5062.78 575.338 5532.87 588.04 5782 588.04M0 588.631C437.187 587.451 796.988 640.435 1508.97 911.04C2171.78 1162.98 2641.87 1175.68 2891 1175.68C3140.13 1175.68 3610.22 1162.98 4273.03 911.04C4985.01 640.435 5344.81 587.451 5782 588.631"
-						stroke="url(#gradient)"
-						strokeOpacity="0.5"
-						strokeMiterlimit="10"
-					/>
-					<defs>
-						<linearGradient
-							id="gradient"
-							x1="-1477.49"
-							y1="-270.541"
-							x2="-1544.89"
-							y2="2461.33"
-							gradientUnits="userSpaceOnUse"
+			<div className="w-full px-4 text-left">
+				<Caption message="Technology" />
+				<Header message="Security & Quality Tools" />
+				<div className="relative z-10 grid grid-cols-2 lg:grid-cols-4 gap-px mb-40 overflow-hidden rounded-2xl border border-gray-200 bg-slate-200 shadow-2xl">
+					<div className="flex flex-col h-full p-4 bg-white hover:bg-slate-200 transition-colors duration-300">
+						<div className="flex mb-2">
+							<img alt="OWASP" className="max-h-[2rem]" src={imgLogoOwasp} />
+						</div>
+						<div className="mb-2 font-semibold">OWASP</div>
+						<div className="mb-2 text-sm text-slate-600 sm:grow">
+							A global non-profit organization that improves software security
+							through community-led open-source projects, tools, and educational
+							resources.
+						</div>
+						<div className="mt-2">
+							<NavItem
+								path={"https://owasp.org"}
+								label="Learn more"
+								icon="fi-sr-arrow-right"
+								className="block transition-colors transition-discrete duration-300 ease-in-out hover:text-brand-blue"
+							/>
+						</div>
+					</div>
+					<div className="flex flex-col h-full p-4 bg-white hover:bg-slate-200 transition-colors duration-300">
+						<div className="flex mb-2">
+							<img alt="Sentry" className="max-h-[2rem]" src={imgLogoSentry} />
+						</div>
+						<div className="font-semibold">Sentry</div>
+						<div className="text-sm text-slate-600 sm:grow">
+							An open-source error tracking and performance monitoring platform
+							that helps developers diagnose, fix, and optimize code in real
+							time.
+						</div>
+						<div className="mt-2">
+							<NavItem
+								path={"https://sentry.io"}
+								label="Learn more"
+								icon="fi-sr-arrow-right"
+								className="block transition-colors transition-discrete duration-300 ease-in-out hover:text-brand-blue"
+							/>
+						</div>
+					</div>
+					<div className="flex flex-col h-full p-4 bg-white hover:bg-slate-200 transition-colors duration-300">
+						<div className="flex mb-2">
+							<img alt="Snyk" className="max-h-[2rem]" src={imgLogoSnyk} />
+						</div>
+						<div className="font-semibold">Snyk</div>
+						<div className="text-sm text-slate-600 sm:grow">
+							A developer-first security platform designed to find and
+							automatically fix vulnerabilities in open-source dependencies,
+							container images, and infrastructure as code.
+						</div>
+						<div className="mt-2">
+							<NavItem
+								path={"https://snyk.io"}
+								label="Learn more"
+								icon="fi-sr-arrow-right"
+								className="block transition-colors transition-discrete duration-300 ease-in-out hover:text-brand-blue"
+							/>
+						</div>
+					</div>
+					<div className="flex flex-col h-full p-4 bg-white hover:bg-slate-200 transition-colors duration-300">
+						<div className="flex mb-2">
+							<img
+								alt="SonarQube"
+								className="max-h-[2rem]"
+								src={imgLogoSonar}
+							/>
+						</div>
+						<div className="font-semibold">SonarQube</div>
+						<div className="text-sm text-slate-600 sm:grow">
+							An automatic code review tool that detects bugs, vulnerabilities,
+							and code smell in source code and ensures code quality.
+						</div>
+						<div className="mt-2">
+							<NavItem
+								path={"https://www.sonarsource.com/products/sonarqube/"}
+								label="Learn more"
+								icon="fi-sr-arrow-right"
+								className="block transition-colors transition-discrete duration-300 ease-in-out hover:text-brand-blue"
+							/>
+						</div>
+					</div>
+					<div className="flex flex-col h-full p-4 bg-white hover:bg-slate-200 transition-colors duration-300">
+						<div className="flex mb-2">
+							<img
+								alt="Aikido"
+								className="max-h-[1.6rem]"
+								src={imgLogoAikido}
+							/>
+						</div>
+						<div className="font-semibold">Aikido Security</div>
+						<div className="text-sm text-slate-600 sm:grow">
+							An security platform that consolidates multiple scanning features
+							like SAST, DAST, and dependency checks.
+						</div>
+						<div className="mt-2">
+							<NavItem
+								path={"https://www.aikido.dev"}
+								label="Learn more"
+								icon="fi-sr-arrow-right"
+								className="block transition-colors transition-discrete duration-300 ease-in-out hover:text-brand-blue"
+							/>
+						</div>
+					</div>
+					<div className="flex flex-col h-full p-4 bg-white hover:bg-slate-200 transition-colors duration-300">
+						<div className="flex mb-2">
+							<img alt="Qlty" className="max-h-[1.6rem]" src={imgLogoQlty} />
+						</div>
+						<div className="font-semibold">Qlty</div>
+						<div className="text-sm text-slate-600 sm:grow">
+							A development platform focused on improving code quality, testing
+							efficiency, and engineering velocity through automated workflows.
+						</div>
+						<div className="mt-2">
+							<NavItem
+								path={"https://qlty.sh"}
+								label="Learn more"
+								icon="fi-sr-arrow-right"
+								className="block transition-colors transition-discrete duration-300 ease-in-out hover:text-brand-blue"
+							/>
+						</div>
+					</div>
+					<div className="flex flex-col h-full p-4 bg-white hover:bg-slate-200 transition-colors duration-300">
+						<div className="flex mb-2">
+							<img
+								alt="GitHub Copilot"
+								className="max-h-[1.6rem]"
+								src={imgLogoGithubCopilot}
+							/>
+						</div>
+						<div className="font-semibold">GitHub Copilot</div>
+						<div className="text-sm text-slate-600 sm:grow">
+							An AI assistant that scans code for security vulnerabilities in
+							real time and blocks insecure coding patterns before they are
+							committed.
+						</div>
+						<div className="mt-2">
+							<NavItem
+								path={"https://github.com/features/copilot"}
+								label="Learn more"
+								icon="fi-sr-arrow-right"
+								className="block transition-colors transition-discrete duration-300 ease-in-out hover:text-brand-blue"
+							/>
+						</div>
+					</div>
+					<div className="flex flex-col h-full p-4 bg-white hover:bg-slate-200 transition-colors duration-300">
+						<div className="flex mb-2">
+							<img alt="CERT" className="max-h-[1.6rem]" src={imgLogoCert} />
+						</div>
+						<div className="font-semibold">CERT</div>
+						<div className="text-sm text-slate-600 sm:grow">
+							The Polish national computer emergency response team responsible
+							for monitoring, analyzing, and mitigating cybersecurity threats
+							across the country.
+						</div>
+						<div className="mt-2">
+							<NavItem
+								path={"https://cert.pl"}
+								label="Learn more"
+								icon="fi-sr-arrow-right"
+								className="block transition-colors transition-discrete duration-300 ease-in-out hover:text-brand-blue"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div
+				id={AppComponents.security}
+				className="relative flex flex-wrap pt-20 items-center mb-40 text-left"
+			>
+				<div className="w-full lg:w-6/12 lg:px-4">
+					<Caption message="Technology" />
+					<Header message="Security" />
+					<p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-600">
+						At <b>Coredata</b>, the security of your data and digital assets is
+						our absolute priority. We enforce strict data isolation protocols to
+						keep sensitive information completely separated and secure.
+					</p>
+					<p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+						For maximum privacy, we can fully deploy and run AI models locally
+						within your own dedicated infrastructure, ensuring your company data
+						never leaves your environment or leaks into public training
+						datasets.
+					</p>
+					<div className="mt-6">
+						<BulletPoint
+							title={`CI/CD Code Scanning & Quality Tools`}
+							icon={"fi fi-sr-shield-check"}
 						>
-							<stop stopColor="#D1D1FF" />
-							<stop offset="0.299723" stopColor="#4f46e5" />
-							<stop offset="0.583885" stopColor="#3d91fc" />
-							<stop offset="1" stopColor="#3725FF" />
-						</linearGradient>
-					</defs>
-				</svg>
+							<p className="leading-relaxed">
+								Integrating automated vulnerability scans and rigorous code
+								quality checks directly into our deployment pipelines to
+								eliminate security risks before they hit production.
+							</p>
+						</BulletPoint>
+						<BulletPoint
+							title={`Safe AI Data Processing`}
+							icon={"fi fi-sr-brain-circuit"}
+						>
+							<p className="leading-relaxed">
+								Integrating automated vulnerability scans and rigorous code
+								quality checks directly into our deployment pipelines to
+								eliminate security risks before they hit production.
+							</p>
+						</BulletPoint>
+						<BulletPoint
+							title={`Resilient Cloud Disaster Recovery`}
+							icon={"fi fi-sr-globe-shield"}
+						>
+							<p className="leading-relaxed">
+								Implementing multi-layered cloud security frameworks, continuous
+								backups, and robust failover solutions to strictly prevent data
+								loss and ensure maximum business continuity.
+							</p>
+						</BulletPoint>
+					</div>
+				</div>
+				<div className="relative hidden lg:block w-6/12">
+					<div className="absolute right-0 -top-60 z-0 w-8/12">
+						<img
+							alt="White board with consulting sketches"
+							className="w-full max-w-full rounded-4xl shadow-2xl shadow-slate-500"
+							src={imgDatacenter}
+						/>
+					</div>
+					<div className="absolute left-10 top-0 z-10">
+						<Console live={true}>
+							<ConsoleCommand name="run tests" />
+							<ConsoleOutput success={true} result="all good">
+								running unit tests
+							</ConsoleOutput>
+							<ConsoleOutput success={true} result="all good">
+								running integration tests
+							</ConsoleOutput>
+							<ConsoleOutput success={true} result="all good">
+								running penetration tests
+							</ConsoleOutput>
+							<div className="w-full"></div>
+							<ConsoleOutput
+								success={true}
+								result="all checks completed, system is secure"
+							></ConsoleOutput>
+						</Console>
+					</div>
+				</div>
 			</div>
 		</Section>
 	);

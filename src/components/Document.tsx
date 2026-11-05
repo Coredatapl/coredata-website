@@ -48,7 +48,7 @@ export default function Document({ type }: DocumentProps) {
 			</Section>
 			<Section bgColor="bg-slate-100" style="relative pt-28">
 				<Spacer color={"text-slate-100"} fillColor={"fill-slate-100"} />
-				<div className="relative flex -mt-40 py-16 z-10 justify-center bg-white shadow-xl rounded-lg">
+				<div className="relative flex -mt-40 -mb-10 py-16 z-10 justify-center bg-white shadow-2xl shadow-slate-500 rounded-2xl">
 					<div
 						className="w-11/12 mx-auto px-4 text-left document-content"
 						dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
