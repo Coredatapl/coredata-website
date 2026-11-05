@@ -15,44 +15,44 @@ import Technologies from "./Technologies";
 import Loading from "./ui/Loading";
 
 interface AppProps {
-	loaded?: boolean;
+  loaded?: boolean;
 }
 
 export default function App({ loaded = false }: AppProps) {
-	const { loading } = useLoading();
-	const { scrollTo } = useUi();
-	const location = useLocation();
-	const hash = location.hash.replace("#", "");
+  const { loading } = useLoading();
+  const { scrollTo } = useUi();
+  const location = useLocation();
+  const hash = location.hash.replace("#", "");
 
-	useEffect(() => {
-		console.clear();
-		console.log(
-			"%cCoredata Website is %crunning%c. All issues will be logged in this console.",
-			"color: inherit;",
-			"color: #7C3AED; font-weight: bold;",
-			"color: inherit;",
-		);
+  useEffect(() => {
+    console.clear();
+    console.log(
+      "%cCoredata Website is %crunning%c. All issues will be logged in this console.",
+      "color: inherit;",
+      "color: #7C3AED; font-weight: bold;",
+      "color: inherit;",
+    );
 
-		if (hash) {
-			scrollTo(hash);
-		}
-	}, [hash, scrollTo]);
+    if (hash) {
+      scrollTo(hash);
+    }
+  }, [hash, scrollTo]);
 
-	if (!loaded && loading) {
-		return <Loading />;
-	}
+  if (!loaded && loading) {
+    return <Loading />;
+  }
 
-	return (
-		<AppView>
-			<Navbar />
-			<Hero />
-			<About />
-			<Apps />
-			<Ai />
-			<Consultations />
-			<Technologies />
-			<Contact />
-			<Footer />
-		</AppView>
-	);
+  return (
+    <AppView>
+      <Navbar />
+      <Hero />
+      <About />
+      <Apps />
+      <Ai />
+      <Consultations />
+      <Technologies />
+      <Contact />
+      <Footer />
+    </AppView>
+  );
 }
