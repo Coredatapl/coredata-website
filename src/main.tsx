@@ -8,32 +8,33 @@ import NotFound from "./components/ui/NotFound.tsx";
 
 import "./assets/css/index.css";
 import "./assets/css/fonts.css";
+import "./assets/css/uicons.css";
 
 const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <App />,
-		errorElement: <ErrorBoundary />,
-	},
-	{
-		path: "/privacy",
-		element: <Document type="privacy" />,
-		errorElement: <ErrorBoundary />,
-	},
-	{
-		path: "/terms",
-		element: <Document type="terms" />,
-		errorElement: <ErrorBoundary />,
-	},
-	{
-		path: "*",
-		element: <NotFound />,
-		errorElement: <ErrorBoundary />,
-	},
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorBoundary />,
+  },
+  {
+    path: "/privacy",
+    element: <Document type="privacy" />,
+    errorElement: <ErrorBoundary />,
+  },
+  {
+    path: "/terms",
+    element: <Document type="terms" />,
+    errorElement: <ErrorBoundary />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+    errorElement: <ErrorBoundary />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-	<React.StrictMode>
-		<RouterProvider router={router} />
-	</React.StrictMode>,
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
 );
